@@ -1,6 +1,7 @@
 import { GlobalStyles } from "./styles";
 import { Navbar } from "./components";
 import { ThemeModeProvider } from "./context/ThemeContext";
+import "./styles/fonts.css";
 function App() {
   return (
     <ThemeModeProvider>

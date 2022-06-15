@@ -44,6 +44,7 @@ export const StyledNav = styled.header<INavbar>`
     a {
       transition: var(--transition2);
       font-size: var(--fz-xs);
+      font-weight: 500;
       :hover {
         color: ${(props) => props.theme.hover};
       }

@@ -63,6 +63,7 @@ export const StyledSideNav = styled.div<{ open: boolean }>`
     a {
       transition: var(--transition2);
       font-size: var(--fz-xl);
+      font-weight: 500;
       :hover {
         color: ${(props) => props.theme.hover};
       }

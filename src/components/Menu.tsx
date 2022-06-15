@@ -17,6 +17,7 @@ const StyledBurger = styled.div<{ open: boolean }>`
     margin: 35px 25px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-flow: column nowrap;
     z-index: 21;
     cursor: pointer;
