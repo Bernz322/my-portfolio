@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { ThemeModeContext } from "../context/ThemeContext";
 
 const StyledPreLoader = styled(motion.div)`
-  height: calc(100vh - 50px);
+  height: calc(100vh);
   display: flex;
   justify-content: center;
   align-items: center;
