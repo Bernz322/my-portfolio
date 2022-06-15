@@ -12,6 +12,12 @@ export const StyledNav = styled.header<INavbar>`
   justify-content: center;
   padding: 0 70px;
   z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(10px);
+
   @media only screen and (max-width: 768px) {
     padding: 0 25px;
   }
@@ -20,7 +26,6 @@ export const StyledNav = styled.header<INavbar>`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* position: fixed; */
   }
 
   .nav-logo {

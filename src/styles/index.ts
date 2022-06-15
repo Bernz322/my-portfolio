@@ -4,3 +4,5 @@ export { default as GlobalStyles } from "./GlobalStyles";
 export { StyledNav } from "./componentStyles/navStyles";
 export { StyledToggler } from "./componentStyles/toggleStyles";
 export { StyledSideNav } from "./componentStyles/sideNavStyles";
+export { StyledMain } from "./componentStyles/mainStyles";
+export { StyledSideElement } from "./componentStyles/sideElementStyles";

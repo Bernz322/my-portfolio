@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { GlobalStyles } from "./styles";
-import { Navbar, Preloader } from "./components";
+import { GlobalStyles, StyledMain } from "./styles";
+import { Navbar, Preloader, SideElement } from "./components";
 import { ThemeModeProvider } from "./context/ThemeContext";
 import "./styles/fonts.css";
 import { AnimatePresence, motion } from "framer-motion";
@@ -36,18 +36,20 @@ function App() {
       {isLoaded && (
         <React.Fragment>
           <Navbar />
-          <div className="App">
-            <h3>Todo</h3>
-            <ul>
-              <li>Splash Screen with Animations</li>
-              <li>Socials in left side (Britanny Style)</li>
-              <li>Contact email in right side</li>
-              <p>Goal ends here today</p>
-              <li>Hero Section</li>
-              <li>Footer</li>
-              <li>Scrollbar Minimalist</li>
-            </ul>
-          </div>
+          <StyledMain>
+            <SideElement />
+            <div className="hero">
+              <h1>Todo</h1>
+              <ul>
+                <li>Footer</li>
+                <li>
+                  Add Socials in footer when screen device is less than 768px
+                </li>
+                <li>Start Hero Section</li>
+                <li>Start About Section</li>
+              </ul>
+            </div>
+          </StyledMain>
         </React.Fragment>
       )}
     </ThemeModeProvider>

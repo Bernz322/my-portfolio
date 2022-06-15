@@ -55,6 +55,7 @@ const variables = css`
     --spacing-xl: 32px;
     --spacing-xxl: 64px;
 
+    --transition1: all 0.5s ease-in-out;
     --transition2: all 0.2s ease-in-out;
     --transition3: all 0.3s ease-in-out;
     --nav-height: 100px;
