@@ -24,7 +24,7 @@ const GlobalStyles = createGlobalStyle<ThemeProps>`
     }
 
     body::-webkit-scrollbar-thumb {
-        background-color: ${(props) => props.theme.sideIcons};
+        background-color: ${(props) => props.theme.color3};
         border-radius: 10px;
         background-image: -webkit-linear-gradient(
         45deg,
@@ -41,7 +41,7 @@ const GlobalStyles = createGlobalStyle<ThemeProps>`
     body{
         font-family: var(--font-sans);
         background-color:${(props) => props.theme.body};
-        color:${(props) => props.theme.color};
+        color:${(props) => props.theme.color1};
         transition: var(--transition2);
         width: 100%;
         min-height: fit-content;
@@ -52,7 +52,7 @@ const GlobalStyles = createGlobalStyle<ThemeProps>`
 
     a{
         text-decoration:none;
-        color:${(props) => props.theme.color};
+        color:${(props) => props.theme.color1};
         font-family: var(--font-mono);
     }
 

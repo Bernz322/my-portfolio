@@ -36,7 +36,7 @@ export const StyledSideElement = styled.div`
 
       a {
         transition: var(--transition2);
-        color: ${(props) => props.theme.sideIcons};
+        color: ${(props) => props.theme.color2};
         &:hover {
           color: ${(props) => props.theme.hover};
           transform: translateY(-7px);
@@ -46,7 +46,7 @@ export const StyledSideElement = styled.div`
     &:after {
       content: "";
       display: inline-block;
-      border: 1px solid ${(props) => props.theme.sideIcons};
+      border: 1px solid ${(props) => props.theme.color2};
       width: 1px;
       height: 130px;
       margin: 25px auto 0;
@@ -77,7 +77,7 @@ export const StyledSideElement = styled.div`
       justify-content: flex-start;
       a {
         transition: var(--transition2);
-        color: ${(props) => props.theme.sideIcons};
+        color: ${(props) => props.theme.color2};
         &:hover {
           color: ${(props) => props.theme.hover};
           transform: translateY(-7px);
@@ -87,7 +87,7 @@ export const StyledSideElement = styled.div`
       &:after {
         content: "";
         display: inline-block;
-        border: 1px solid ${(props) => props.theme.sideIcons};
+        border: 1px solid ${(props) => props.theme.color2};
         width: 1px;
         height: 130px;
         margin: 25px auto 0;

@@ -50,6 +50,7 @@ export const StyledNav = styled.header<INavbar>`
       transition: var(--transition2);
       font-size: var(--fz-xs);
       font-weight: 500;
+      color: ${(props) => props.theme.color2};
       :hover {
         color: ${(props) => props.theme.hover};
       }
@@ -77,8 +78,8 @@ export const StyledNav = styled.header<INavbar>`
     font-size: var(--fz-xs);
     padding: 5px 10px;
     font-family: var(--font-sans);
-    color: ${(props) => props.theme.subcolor};
-    border: 2px solid ${(props) => props.theme.subcolor};
+    color: ${(props) => props.theme.color4};
+    border: 2px solid ${(props) => props.theme.color4};
     border-radius: 5px;
     cursor: pointer;
     background-color: transparent;

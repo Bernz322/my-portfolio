@@ -76,8 +76,8 @@ export const StyledSideNav = styled.div<{ open: boolean }>`
     font-size: var(--fz-xs);
     padding: 5px 10px;
     font-family: var(--font-sans);
-    color: ${(props) => props.theme.subcolor};
-    border: 2px solid ${(props) => props.theme.subcolor};
+    color: ${(props) => props.theme.color4};
+    border: 2px solid ${(props) => props.theme.color4};
     border-radius: 5px;
     cursor: pointer;
     background-color: transparent;

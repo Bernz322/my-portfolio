@@ -29,7 +29,7 @@ const StyledBurger = styled.div<{ open: boolean }>`
     width: 2rem;
     height: 0.25rem;
     border-radius: 10px;
-    background-color: ${(props) => props.theme.subcolor};
+    background-color: ${(props) => props.theme.color4};
     &:nth-child(1) {
       transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }

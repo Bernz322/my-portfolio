@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { GlobalStyles, StyledMain } from "./styles";
-import { Navbar, Preloader, SideElement } from "./components";
+import { Hero, Navbar, Preloader, SideElement } from "./components";
 import { ThemeModeProvider } from "./context/ThemeContext";
 import "./styles/fonts.css";
 import { AnimatePresence, motion } from "framer-motion";
@@ -38,17 +38,7 @@ function App() {
           <Navbar />
           <StyledMain>
             <SideElement />
-            <div className="hero">
-              <h1>Todo</h1>
-              <ul>
-                <li>Footer</li>
-                <li>
-                  Add Socials in footer when screen device is less than 768px
-                </li>
-                <li>Start Hero Section</li>
-                <li>Start About Section</li>
-              </ul>
-            </div>
+            <Hero />
           </StyledMain>
         </React.Fragment>
       )}
