@@ -17,7 +17,7 @@ export const StyledHero = styled.section`
   }
 
   .intro {
-    color: ${(props) => props.theme.btn};
+    color: ${(props) => props.theme.intro};
     margin-bottom: 15px;
     font-family: var(--font-mono);
     font-size: var(--fz-md);
