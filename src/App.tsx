@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { GlobalStyles, StyledMain } from "./styles";
-import { Cursor, Hero, Navbar, Preloader, SideElement } from "./components";
+import {
+  About,
+  Contact,
+  Cursor,
+  Footer,
+  Hero,
+  Navbar,
+  Preloader,
+  SideElement,
+} from "./components";
 import { ThemeModeProvider } from "./context/ThemeContext";
 import "./styles/fonts.css";
 import { AnimatePresence, motion } from "framer-motion";
@@ -39,7 +48,10 @@ function App() {
           <StyledMain>
             <SideElement />
             <Hero />
+            <About />
+            <Contact />
           </StyledMain>
+          <Footer />
         </React.Fragment>
       )}
     </ThemeModeProvider>

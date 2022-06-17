@@ -14,3 +14,8 @@ export interface ISocialLinks {
   url: string;
   Icon: IconType;
 }
+export interface ITechs {
+  id: string;
+  name: string;
+  Icon: IconType;
+}

@@ -6,6 +6,9 @@ export { default as Preloader } from "./Preloader";
 export { default as SideElement } from "./SideElement";
 export { default as Cursor } from "./Cursor";
 export { default as Button } from "./Button";
+export { default as Footer } from "./Footer";
 
 // Sections
 export { default as Hero } from "./sections/Hero";
+export { default as About } from "./sections/About";
+export { default as Contact } from "./sections/Contact";
