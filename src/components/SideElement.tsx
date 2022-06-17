@@ -9,8 +9,8 @@ const SideElement = () => {
           {socialLinks.map((social: any) => {
             const { name, url, Icon } = social;
             return (
-              <li>
-                <a href={url} key={name} target="_blank" rel="noreferrer">
+              <li key={name}>
+                <a href={url} target="_blank" rel="noreferrer">
                   <Icon className="side-icons" />
                 </a>
               </li>

@@ -1,3 +1,4 @@
+import { Button } from "..";
 import { StyledHero } from "../../styles";
 
 const Hero = () => {
@@ -20,9 +21,7 @@ const Hero = () => {
         {texts.map((text, i) => {
           return <div key={i}>{text}</div>;
         })}
-        <div>
-          <a href="#contact">Get in Touch</a>
-        </div>
+        <Button buttonText="Get in Touch" buttonUrl="#contact" />
       </>
     </StyledHero>
   );

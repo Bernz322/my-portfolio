@@ -14,9 +14,13 @@ const Navbar = () => {
       <nav>
         <div className="nav-left">
           {theme === "light" ? (
-            <img src={logo1} alt="logo" className="nav-logo" />
+            <a href="/">
+              <img src={logo1} alt="logo" className="nav-logo" />
+            </a>
           ) : (
-            <img src={logo} alt="logo" className="nav-logo" />
+            <a href="/">
+              <img src={logo} alt="logo" className="nav-logo" />
+            </a>
           )}
         </div>
         <div className="nav-right">

@@ -58,6 +58,7 @@ const variables = css`
     --transition1: all 0.5s ease-in-out;
     --transition2: all 0.2s ease-in-out;
     --transition3: all 0.3s ease-in-out;
+    --cursor-transition: all 1s linear;
     --nav-height: 100px;
     --border-radius-circle: 50%;
     --site-max-width: 1400px;

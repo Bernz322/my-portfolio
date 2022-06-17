@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { GlobalStyles, StyledMain } from "./styles";
-import { Hero, Navbar, Preloader, SideElement } from "./components";
+import { Cursor, Hero, Navbar, Preloader, SideElement } from "./components";
 import { ThemeModeProvider } from "./context/ThemeContext";
 import "./styles/fonts.css";
 import { AnimatePresence, motion } from "framer-motion";
@@ -16,7 +16,7 @@ function App() {
   return (
     <ThemeModeProvider>
       <GlobalStyles />
-
+      {/* <Cursor /> */}
       <AnimatePresence>
         {!isLoaded && (
           <motion.div

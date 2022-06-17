@@ -6,6 +6,8 @@ export { StyledToggler } from "./componentStyles/toggleStyles";
 export { StyledSideNav } from "./componentStyles/sideNavStyles";
 export { StyledMain } from "./componentStyles/mainStyles";
 export { StyledSideElement } from "./componentStyles/sideElementStyles";
+export { StyledCursor } from "./componentStyles/cursorStyles";
+export { StyledButton } from "./componentStyles/buttonStyles";
 
 // Section Styles
 export { StyledHero } from "./sectionStyles/heroStyles";

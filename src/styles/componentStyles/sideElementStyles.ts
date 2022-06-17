@@ -6,6 +6,10 @@ export const StyledSideElement = styled.div`
   justify-content: space-between;
   position: relative;
 
+  @media only screen and (max-width: 489px) {
+    display: none;
+  }
+
   .left {
     position: fixed;
     bottom: 0;
