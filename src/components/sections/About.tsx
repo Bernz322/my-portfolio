@@ -20,8 +20,12 @@ const About = () => {
         <img src={profile} alt="me" />
         <div className="details">
           <h4 className="sub-head">Jeffrey Bernadas</h4>
-          {desc.map((desc) => {
-            return <p className="desc">{desc}</p>;
+          {desc.map((desc, i) => {
+            return (
+              <p key={i} className="desc">
+                {desc}
+              </p>
+            );
           })}
         </div>
       </div>

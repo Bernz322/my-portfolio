@@ -14,6 +14,7 @@ import {
 import { ThemeModeProvider } from "./context/ThemeContext";
 import "./styles/fonts.css";
 import { AnimatePresence, motion } from "framer-motion";
+import { Route, Routes } from "react-router-dom";
 function App() {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
@@ -46,13 +47,21 @@ function App() {
       {isLoaded && (
         <React.Fragment>
           <Navbar />
-          <StyledMain>
-            <SideElement />
-            <Hero />
-            <About />
-            <Project />
-            <Contact />
-          </StyledMain>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <StyledMain>
+                  <SideElement />
+                  <Hero />
+                  <About />
+                  <Project />
+                  <Contact />
+                </StyledMain>
+              }
+            />
+          </Routes>
+
           <Footer />
         </React.Fragment>
       )}
