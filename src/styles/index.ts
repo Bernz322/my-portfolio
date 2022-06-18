@@ -14,4 +14,8 @@ export { StyledTechStack } from "./componentStyles/techStackStyles";
 // Section Styles
 export { StyledHero } from "./sectionStyles/heroStyles";
 export { StyledAbout } from "./sectionStyles/aboutStyles";
+export {
+  StyledProject,
+  StyledProjectContainer,
+} from "./sectionStyles/projectStyles";
 export { StyledContact } from "./sectionStyles/contactStyles";

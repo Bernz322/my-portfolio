@@ -27,8 +27,16 @@ import {
   SiFramer,
   SiExpress,
   SiPostman,
+  SiMapbox,
+  SiSpotify,
+  SiSocketdotio,
+  SiOpencv,
+  SiGooglecalendar,
+  SiMega,
 } from "react-icons/si";
-import { INavLinks, ISocialLinks, ITechs } from "./types";
+import { INavLinks, IProjects, ISocialLinks, ITechs } from "./types";
+import { vacay, jbshort, spotify, tsismis, thesis } from "../assets/projects/";
+
 export const navLinks: INavLinks = {
   home: [
     {
@@ -127,7 +135,7 @@ export const techs: ITechs[] = [
   },
   {
     id: "framer-motion",
-    name: "Framer-Motion",
+    name: "Framer Motion",
     Icon: SiFramer,
   },
   {
@@ -184,5 +192,211 @@ export const techs: ITechs[] = [
     id: "raspberrypi",
     name: "Raspberry Pi",
     Icon: SiRaspberrypi,
+  },
+];
+
+export const projects: IProjects[] = [
+  {
+    name: "Vacay",
+    info: "A web app for hosting rooms within CARAGA Region for free. Comes with map pinning support, listing dashboard, reservations, and many more.",
+    image: vacay,
+    techs: [
+      {
+        name: "React.js",
+        Icon: SiReact,
+      },
+      {
+        name: "Redux",
+        Icon: SiRedux,
+      },
+      {
+        name: "MantineUI",
+        Icon: SiMega,
+      },
+      {
+        name: "Mapbox",
+        Icon: SiMapbox,
+      },
+      {
+        name: "Node.js",
+        Icon: SiNodedotjs,
+      },
+      {
+        name: "Express.js",
+        Icon: SiExpress,
+      },
+      {
+        name: "Sequelize ORM",
+        Icon: SiSequelize,
+      },
+      {
+        name: "MySQL",
+        Icon: SiMysql,
+      },
+    ],
+    urls: {
+      github: "https://github.com/Bernz322/vacay-app",
+      demo: "https://vacaycaraga.netlify.app/",
+    },
+  },
+  {
+    name: "JBShort",
+    info: "A free URL shortener web app with customizable short URL.",
+    image: jbshort,
+    techs: [
+      {
+        name: "React.js",
+        Icon: SiReact,
+      },
+      {
+        name: "Framer Motion",
+        Icon: SiFramer,
+      },
+      {
+        name: "Styled-Components",
+        Icon: SiStyledcomponents,
+      },
+      {
+        name: "Node.js",
+        Icon: SiNodedotjs,
+      },
+      {
+        name: "Express.js",
+        Icon: SiExpress,
+      },
+      {
+        name: "MongoDB",
+        Icon: SiMongodb,
+      },
+    ],
+    urls: {
+      github: "https://github.com/Bernz322/jbshort",
+      demo: "https://www.jbshort.xyz/",
+    },
+  },
+  {
+    name: "Spotify Viewer",
+    info: "A web app for showing your personal Spotify data such as playlists, top artists, and top tracks. View an artists data together with their singles, albums, and artists related to them. See a detailed information of each tracks and a preview of it.",
+    image: spotify,
+    techs: [
+      {
+        name: "React.js",
+        Icon: SiReact,
+      },
+      {
+        name: "Styled-Components",
+        Icon: SiStyledcomponents,
+      },
+      {
+        name: "Node.js",
+        Icon: SiNodedotjs,
+      },
+      {
+        name: "Express.js",
+        Icon: SiExpress,
+      },
+      {
+        name: "Spotify API",
+        Icon: SiSpotify,
+      },
+    ],
+    urls: {
+      github: "https://github.com/Bernz322/spotify-api-profile-app",
+      demo: "https://spotify-api-profile-app.herokuapp.com/",
+    },
+  },
+  {
+    name: "Tsismis",
+    info: "A real-time chat app with group chat functionalities, real-time notifications, and dark theme.",
+    image: tsismis,
+    techs: [
+      {
+        name: "React.js",
+        Icon: SiReact,
+      },
+      {
+        name: "Styled-Components",
+        Icon: SiStyledcomponents,
+      },
+      {
+        name: "Material UI",
+        Icon: SiMaterialui,
+      },
+      {
+        name: "Socket.IO",
+        Icon: SiSocketdotio,
+      },
+      {
+        name: "Node.js",
+        Icon: SiNodedotjs,
+      },
+      {
+        name: "Express.js",
+        Icon: SiExpress,
+      },
+      {
+        name: "MongoDB",
+        Icon: SiMongodb,
+      },
+    ],
+    urls: {
+      github: "https://github.com/Bernz322/tsismis",
+      demo: "https://www.tsismis.xyz/",
+    },
+  },
+  {
+    name: "Attendance System - Thesis",
+    info: "A web app for viewing a student's attendance record based on their RFID tags. The attendance recording is done through a Raspberry Pi 4B with an RC522 Reader and a HOG algorithm-based Face Recognition functionality for added security. This is my undergraduate Thesis entitled 'Automated Attendance System using RFID, Face Recognition and SMS Capability'. Full details available in the repository.",
+    image: thesis,
+    techs: [
+      {
+        name: "React.js",
+        Icon: SiReact,
+      },
+      {
+        name: "Redux",
+        Icon: SiRedux,
+      },
+      {
+        name: "MantineUI",
+        Icon: SiMega,
+      },
+      {
+        name: "Full Calendar",
+        Icon: SiGooglecalendar,
+      },
+      {
+        name: "Node.js",
+        Icon: SiNodedotjs,
+      },
+      {
+        name: "Express.js",
+        Icon: SiExpress,
+      },
+      {
+        name: "Sequelize ORM",
+        Icon: SiSequelize,
+      },
+      {
+        name: "MySQL",
+        Icon: SiMysql,
+      },
+      {
+        name: "Raspberry Pi 4B",
+        Icon: SiRaspberrypi,
+      },
+      {
+        name: "Python",
+        Icon: SiPython,
+      },
+      {
+        name: "OpenCV",
+        Icon: SiOpencv,
+      },
+    ],
+    urls: {
+      github: "https://github.com/Bernz322/snnhs-attendance-system",
+      demo: "https://snnhs-attendance.netlify.app/",
+    },
   },
 ];

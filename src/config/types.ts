@@ -19,3 +19,17 @@ export interface ITechs {
   name: string;
   Icon: IconType;
 }
+
+export interface IProjects {
+  name: string;
+  info: string;
+  image: string;
+  techs: {
+    name: string;
+    Icon: IconType;
+  }[];
+  urls: {
+    github: string;
+    demo: string;
+  };
+}

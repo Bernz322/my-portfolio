@@ -8,6 +8,7 @@ import {
   Hero,
   Navbar,
   Preloader,
+  Project,
   SideElement,
 } from "./components";
 import { ThemeModeProvider } from "./context/ThemeContext";
@@ -49,6 +50,7 @@ function App() {
             <SideElement />
             <Hero />
             <About />
+            <Project />
             <Contact />
           </StyledMain>
           <Footer />
