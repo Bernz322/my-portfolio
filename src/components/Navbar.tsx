@@ -9,7 +9,7 @@ import { ThemeModeContext } from "../context/ThemeContext";
 
 const Navbar = () => {
   const { theme } = useContext(ThemeModeContext);
-  const [show, setShow] = useState<boolean>(false);
+  const [show, setShow] = useState<boolean>(true);
   const [lastScrollY, setLastScrollY] = useState<number>(0);
 
   const navBarController = useCallback(() => {
@@ -34,7 +34,6 @@ const Navbar = () => {
       window.removeEventListener("scroll", navBarController);
     };
   }, [lastScrollY, navBarController]);
-
   return (
     <StyledNav show={show}>
       <nav>

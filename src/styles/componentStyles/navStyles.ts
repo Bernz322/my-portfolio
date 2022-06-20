@@ -8,7 +8,7 @@ export const StyledNav = styled.header<{ show: boolean }>`
   padding: 0 70px;
   z-index: 9999;
   position: fixed;
-  top: ${({ show }) => (show ? "0" : "-100px")};
+  top: ${({ show }) => (show === true ? "0" : "-100px")};
   left: 0;
   right: 0;
   background-color: ${(props) => props.theme.navbg};
