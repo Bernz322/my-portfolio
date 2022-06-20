@@ -17,7 +17,7 @@ import {
   Vacay,
 } from "./components";
 import { ThemeModeProvider } from "./context/ThemeContext";
-import "./styles/fonts.css";
+// import "./styles/fonts.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { Route, Routes, useLocation } from "react-router-dom";
 
