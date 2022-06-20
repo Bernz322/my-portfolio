@@ -6,6 +6,7 @@ import { navLinks } from "../config/data";
 import { NavLinksProps } from "../config/types";
 import { Menu, ThemeToggler } from ".";
 import { ThemeModeContext } from "../context/ThemeContext";
+import { motion, Variants } from "framer-motion";
 
 const Navbar = () => {
   const { theme } = useContext(ThemeModeContext);
@@ -34,35 +35,75 @@ const Navbar = () => {
       window.removeEventListener("scroll", navBarController);
     };
   }, [lastScrollY, navBarController]);
+
+  const navVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.1,
+        staggerChildren: 0.1,
+        when: "beforeChildren",
+      },
+    },
+  };
+
+  const navLinkVariants: Variants = {
+    hidden: {
+      y: -30,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        ease: "easeInOut",
+        duration: 0.2,
+      },
+    },
+  };
+
   return (
     <StyledNav show={show}>
-      <nav>
-        <div className="nav-left">
+      <motion.nav variants={navVariants} initial="hidden" animate="visible">
+        <motion.div className="nav-left" variants={navLinkVariants}>
           {theme === "light" ? (
-            <a href="/">
-              <img src={logo1} alt="logo" className="nav-logo" />
+            <a href="/" draggable="false">
+              <img
+                draggable="false"
+                src={logo1}
+                alt="logo"
+                className="nav-logo"
+              />
             </a>
           ) : (
-            <a href="/">
-              <img src={logo} alt="logo" className="nav-logo" />
+            <a href="/" draggable="false">
+              <img
+                draggable="false"
+                src={logo}
+                alt="logo"
+                className="nav-logo"
+              />
             </a>
           )}
-        </div>
+        </motion.div>
         <div className="nav-right">
           <ul className="nav-links">
             {navLinks.home.map(({ name, url }: NavLinksProps, i: number) => {
               return (
-                <li key={i}>
+                <motion.li key={i} variants={navLinkVariants}>
                   <a href={url}>{name}</a>
-                </li>
+                </motion.li>
               );
             })}
           </ul>
-          <button className="resume-btn">Resume</button>
-          <ThemeToggler />
+          <motion.button variants={navLinkVariants} className="resume-btn">
+            Resume
+          </motion.button>
+          <ThemeToggler variants={navLinkVariants} />
         </div>
-      </nav>
-      <Menu />
+        <Menu variants={navLinkVariants} />
+      </motion.nav>
     </StyledNav>
   );
 };

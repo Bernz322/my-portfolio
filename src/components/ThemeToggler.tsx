@@ -3,11 +3,12 @@ import { RiSunLine, RiMoonClearLine } from "react-icons/ri";
 import { ThemeModeContext } from "../context/ThemeContext";
 import { StyledToggler } from "../styles";
 
-const ThemeToggler = () => {
+const ThemeToggler = ({ variants }: any) => {
   const { theme, themeToggler } = useContext(ThemeModeContext);
 
   return (
     <StyledToggler
+      variants={variants}
       onClick={themeToggler}
       whileHover={{ scale: 1.2, rotate: 45 }}
       whileTap={{

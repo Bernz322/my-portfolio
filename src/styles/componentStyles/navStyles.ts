@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "styled-components/macro";
 
-export const StyledNav = styled.header<{ show: boolean }>`
+export const StyledNav = styled(motion.header)<{ show: boolean }>`
   height: var(--nav-height);
   display: flex;
   align-items: center;
@@ -71,7 +72,6 @@ export const StyledNav = styled.header<{ show: boolean }>`
   }
 
   .resume-btn {
-    transition: var(--transition2);
     margin: 0 30px 0;
     font-size: var(--fz-xs);
     padding: 5px 10px;

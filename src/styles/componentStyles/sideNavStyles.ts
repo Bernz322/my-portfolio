@@ -1,6 +1,10 @@
 import styled from "styled-components/macro";
 
 export const StyledSideNav = styled.div<{ open: boolean }>`
+  display: none;
+  @media only screen and (max-width: 768px) {
+    display: block;
+  }
   .menu-blur {
     display: none;
     @media only screen and (max-width: 768px) {

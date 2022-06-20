@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
 import styled from "styled-components/macro";
 import { ThemeToggler } from ".";
@@ -5,7 +6,7 @@ import { navLinks } from "../config/data";
 import { NavLinksProps } from "../config/types";
 import { StyledSideNav } from "../styles";
 
-const StyledBurger = styled.div<{ open: boolean }>`
+const StyledBurger = styled(motion.div)<{ open: boolean }>`
   display: none;
 
   @media only screen and (max-width: 768px) {
@@ -14,7 +15,7 @@ const StyledBurger = styled.div<{ open: boolean }>`
     position: fixed;
     top: 0;
     right: 0;
-    margin: 35px 25px;
+    margin: 34px 25px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -43,14 +44,14 @@ const StyledBurger = styled.div<{ open: boolean }>`
   }
 `;
 
-const Menu = () => {
+const Menu = ({ variants }: any) => {
   const [open, setOpen] = useState<boolean>(false);
   const openHandler = () => {
     setOpen(!open);
   };
   return (
     <>
-      <StyledBurger open={open} onClick={openHandler}>
+      <StyledBurger open={open} onClick={openHandler} variants={variants}>
         <div></div>
         <div></div>
         <div></div>
