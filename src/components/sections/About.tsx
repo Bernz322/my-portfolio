@@ -1,7 +1,7 @@
 import { StyledAbout, StyledTechStack } from "../../styles";
 import { techs } from "../../config/data";
 import { ITechs } from "../../config/types";
-import profile from "../../assets/me.png";
+import profile from "../../assets/me.webp";
 
 const About = () => {
   const one =
