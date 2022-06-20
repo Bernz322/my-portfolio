@@ -13,3 +13,11 @@ export { default as Hero } from "./sections/Hero";
 export { default as About } from "./sections/About";
 export { default as Project } from "./sections/Project";
 export { default as Contact } from "./sections/Contact";
+
+// Pages
+export { default as SingleProject } from "./pages/SingleProject";
+export { default as Vacay } from "./pages/Vacay";
+export { default as JBShort } from "./pages/JBShort";
+export { default as Spotify } from "./pages/Spotify";
+export { default as Tsismis } from "./pages/Tsismis";
+export { default as Thesis } from "./pages/Thesis";

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import { StyledNav } from "../styles";
 import logo from "../assets/logo/logo.png";
 import logo1 from "../assets/logo/logo1.png";
@@ -9,8 +9,34 @@ import { ThemeModeContext } from "../context/ThemeContext";
 
 const Navbar = () => {
   const { theme } = useContext(ThemeModeContext);
+  const [show, setShow] = useState<boolean>(false);
+  const [lastScrollY, setLastScrollY] = useState<number>(0);
+
+  const navBarController = useCallback(() => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY > lastScrollY) {
+        // If current Y pos is greater than the last Y pos (being scrolled down)
+        setShow(false);
+      } else {
+        setShow(true);
+      }
+      // remember current page location to use in the next move
+      setLastScrollY(window.scrollY);
+    }
+  }, [lastScrollY]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", navBarController);
+    }
+    // Clean up for unmounting
+    return () => {
+      window.removeEventListener("scroll", navBarController);
+    };
+  }, [lastScrollY, navBarController]);
+
   return (
-    <StyledNav>
+    <StyledNav show={show}>
       <nav>
         <div className="nav-left">
           {theme === "light" ? (

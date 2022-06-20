@@ -1,11 +1,6 @@
 import styled from "styled-components/macro";
 
-interface INavbar {
-  currentScrollPos?: number;
-  previousScrollPos?: number;
-}
-
-export const StyledNav = styled.header<INavbar>`
+export const StyledNav = styled.header<{ show: boolean }>`
   height: var(--nav-height);
   display: flex;
   align-items: center;
@@ -13,10 +8,13 @@ export const StyledNav = styled.header<INavbar>`
   padding: 0 70px;
   z-index: 9999;
   position: fixed;
-  top: 0;
+  top: ${({ show }) => (show ? "0" : "-100px")};
   left: 0;
   right: 0;
-  backdrop-filter: blur(10px);
+  background-color: ${(props) => props.theme.navbg};
+  backdrop-filter: blur(50px);
+  transition: var(--transition2);
+  /* transition: top 0.2s ease-in-out; */
 
   @media only screen and (max-width: 768px) {
     padding: 0 25px;

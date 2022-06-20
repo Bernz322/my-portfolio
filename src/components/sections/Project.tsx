@@ -1,6 +1,9 @@
-import { SiGithub } from "react-icons/si";
+import { FiGithub } from "react-icons/fi";
 import { BiLinkExternal } from "react-icons/bi";
 import { StyledProject, StyledProjectContainer } from "../../styles";
+import { projects } from "../../config/data";
+import { Link } from "react-router-dom";
+import mantine from "../../assets/logo/mantine.svg";
 
 const Project = () => {
   return (
@@ -9,30 +12,38 @@ const Project = () => {
         My Projects<span>.</span>
       </h3>
       <StyledProjectContainer>
-        <li className="project">
-          <img src="" alt="" />
-          <div className="desc">
-            <p className="project-title">Vacay</p>
-            <div className="url">
-              <a
-                href="goog.elcom"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Repository of the Project"
-              >
-                <SiGithub />
-              </a>
-              <a
-                href="asdasd.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Demo link of the Project"
-              >
-                <BiLinkExternal />
-              </a>
-            </div>
-          </div>
-        </li>
+        {projects.map((project) => {
+          return (
+            <li className="project" key={project.name}>
+              <Link to={`/${project.redirect}`}>
+                <img src={project.image} alt="project-img" />
+              </Link>
+              <div className="desc">
+                <div className="project-title">
+                  <p>{project.name}</p>
+                </div>
+                <div className="url">
+                  <a
+                    href={project.urls.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Repository of the Project"
+                  >
+                    <FiGithub className="icons" />
+                  </a>
+                  <a
+                    href={project.urls.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Demo link of the Project"
+                  >
+                    <BiLinkExternal className="icons" />
+                  </a>
+                </div>
+              </div>
+            </li>
+          );
+        })}
       </StyledProjectContainer>
     </StyledProject>
   );

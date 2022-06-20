@@ -36,7 +36,7 @@ import {
 } from "react-icons/si";
 import { INavLinks, IProjects, ISocialLinks, ITechs } from "./types";
 import { vacay, jbshort, spotify, tsismis, thesis } from "../assets/projects/";
-
+import mantine from "../assets/logo/mantine.svg";
 export const navLinks: INavLinks = {
   home: [
     {
@@ -200,6 +200,7 @@ export const projects: IProjects[] = [
     name: "Vacay",
     info: "A web app for hosting rooms within CARAGA Region for free. Comes with map pinning support, listing dashboard, reservations, and many more.",
     image: vacay,
+    redirect: "vacay",
     techs: [
       {
         name: "React.js",
@@ -243,6 +244,7 @@ export const projects: IProjects[] = [
     name: "JBShort",
     info: "A free URL shortener web app with customizable short URL.",
     image: jbshort,
+    redirect: "jbshort",
     techs: [
       {
         name: "React.js",
@@ -278,6 +280,7 @@ export const projects: IProjects[] = [
     name: "Spotify Viewer",
     info: "A web app for showing your personal Spotify data such as playlists, top artists, and top tracks. View an artists data together with their singles, albums, and artists related to them. See a detailed information of each tracks and a preview of it.",
     image: spotify,
+    redirect: "spotify",
     techs: [
       {
         name: "React.js",
@@ -309,6 +312,7 @@ export const projects: IProjects[] = [
     name: "Tsismis",
     info: "A real-time chat app with group chat functionalities, real-time notifications, and dark theme.",
     image: tsismis,
+    redirect: "tsismis",
     techs: [
       {
         name: "React.js",
@@ -348,6 +352,7 @@ export const projects: IProjects[] = [
     name: "Attendance System - Thesis",
     info: "A web app for viewing a student's attendance record based on their RFID tags. The attendance recording is done through a Raspberry Pi 4B with an RC522 Reader and a HOG algorithm-based Face Recognition functionality for added security. This is my undergraduate Thesis entitled 'Automated Attendance System using RFID, Face Recognition and SMS Capability'. Full details available in the repository.",
     image: thesis,
+    redirect: "thesis",
     techs: [
       {
         name: "React.js",

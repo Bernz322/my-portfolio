@@ -44,11 +44,6 @@ export const StyledHero = styled.section`
       font-size: var(--fz-sm);
       max-width: 100%;
     }
-
-    @media only screen and (max-width: 489px) {
-      font-size: var(--fz-sm);
-      max-width: 100%;
-    }
   }
   a {
     color: ${(props) => props.theme.btn};

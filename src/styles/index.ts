@@ -1,4 +1,5 @@
 export { default as GlobalStyles } from "./GlobalStyles";
+export { StyledProjectPage } from "./projectPageStyles";
 
 // Component Styles
 export { StyledNav } from "./componentStyles/navStyles";

@@ -6,15 +6,30 @@ import {
   Cursor,
   Footer,
   Hero,
+  JBShort,
   Navbar,
   Preloader,
   Project,
   SideElement,
+  Spotify,
+  Thesis,
+  Tsismis,
+  Vacay,
 } from "./components";
 import { ThemeModeProvider } from "./context/ThemeContext";
 import "./styles/fonts.css";
 import { AnimatePresence, motion } from "framer-motion";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 function App() {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
@@ -47,12 +62,13 @@ function App() {
       {isLoaded && (
         <React.Fragment>
           <Navbar />
+          <SideElement />
+          <ScrollToTop />
           <Routes>
             <Route
               path="/"
               element={
                 <StyledMain>
-                  <SideElement />
                   <Hero />
                   <About />
                   <Project />
@@ -60,6 +76,11 @@ function App() {
                 </StyledMain>
               }
             />
+            <Route path="/vacay" element={<Vacay />} />
+            <Route path="/jbshort" element={<JBShort />} />
+            <Route path="/spotify" element={<Spotify />} />
+            <Route path="/tsismis" element={<Tsismis />} />
+            <Route path="/thesis" element={<Thesis />} />
           </Routes>
 
           <Footer />

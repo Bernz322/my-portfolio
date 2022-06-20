@@ -24,6 +24,7 @@ export interface IProjects {
   name: string;
   info: string;
   image: string;
+  redirect: string;
   techs: {
     name: string;
     Icon: IconType;
