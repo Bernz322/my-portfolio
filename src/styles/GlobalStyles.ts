@@ -13,7 +13,7 @@ const GlobalStyles = createGlobalStyle<ThemeProps>`
         padding: 0;
         /* cursor: none; */
     }
-
+    
     html{
         scroll-behavior: smooth;
         box-sizing: inherit;
@@ -48,7 +48,7 @@ const GlobalStyles = createGlobalStyle<ThemeProps>`
         min-height: fit-content;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        overflow-x: hidden;
+        overflow-x: hidden !important;
     }
 
     a{
