@@ -11,9 +11,7 @@ const SideElement = () => {
     visible: {
       opacity: 1,
       transition: {
-        delay: 2.5,
-        staggerChildren: 0.3,
-        when: "beforeChildren",
+        delayChildren: 3,
       },
     },
   };
