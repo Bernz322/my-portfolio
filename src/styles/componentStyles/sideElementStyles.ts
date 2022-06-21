@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "styled-components/macro";
 
-export const StyledSideElement = styled.div`
+export const StyledSideElement = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,11 +40,11 @@ export const StyledSideElement = styled.div`
       }
 
       a {
-        transition: var(--transition2);
         color: ${(props) => props.theme.color2};
         &:hover {
+          /* transition: var(--transition2); */
           color: ${(props) => props.theme.hover};
-          transform: translateY(-7px);
+          /* transform: translateY(-7px); */
         }
       }
     }
