@@ -10,16 +10,16 @@ import { motion, Variants } from "framer-motion";
 
 const Navbar = () => {
   const { theme } = useContext(ThemeModeContext);
-  const [show, setShow] = useState<boolean>(true);
+  const [navShow, setNavShow] = useState<boolean>(true);
   const [lastScrollY, setLastScrollY] = useState<number>(0);
 
   const navBarController = useCallback(() => {
     if (typeof window !== "undefined") {
       if (window.scrollY > lastScrollY) {
         // If current Y pos is greater than the last Y pos (being scrolled down)
-        setShow(false);
+        setNavShow(false);
       } else {
-        setShow(true);
+        setNavShow(true);
       }
       // remember current page location to use in the next move
       setLastScrollY(window.scrollY);
@@ -64,7 +64,7 @@ const Navbar = () => {
   };
 
   return (
-    <StyledNav show={show}>
+    <StyledNav $show={navShow}>
       <motion.nav variants={navVariants} initial="hidden" animate="visible">
         <motion.div className="nav-left" variants={navLinkVariants}>
           {theme === "light" ? (

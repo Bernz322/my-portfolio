@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import styled from "styled-components/macro";
 
-export const StyledNav = styled(motion.header)<{ show: boolean }>`
+interface IStyledNav {
+  $show: any;
+}
+
+export const StyledNav = styled(motion.header)<IStyledNav>`
   height: var(--nav-height);
   display: flex;
   align-items: center;
@@ -9,7 +13,7 @@ export const StyledNav = styled(motion.header)<{ show: boolean }>`
   padding: 0 70px;
   z-index: 9999;
   position: fixed;
-  top: ${({ show }) => (show === true ? "0" : "-100px")};
+  top: ${(props) => (props.$show ? "0" : "-100px")};
   left: 0;
   right: 0;
   background-color: ${(props) => props.theme.navbg};
