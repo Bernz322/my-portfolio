@@ -35,7 +35,7 @@ const variables = css`
     --font-sans: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
       Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
-    --font-mono: "FiraMono", Roboto Mono, Oxygen Mono, Ubuntu Mono, Cantarell,
+    --font-mono: "Fira Mono", Roboto Mono, Oxygen Mono, Ubuntu Mono, Cantarell,
       monospace;
 
     --fz-xxs: 12px;
