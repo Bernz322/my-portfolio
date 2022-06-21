@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components/macro";
 import { ThemeToggler } from ".";
 import { navLinks } from "../config/data";
@@ -49,6 +49,15 @@ const Menu = ({ variants }: any) => {
   const openHandler = () => {
     setOpen(!open);
   };
+
+  // To disable scrolling when sidebar is opened
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
+  }, [open]);
   return (
     <>
       <StyledBurger open={open} onClick={openHandler} variants={variants}>
