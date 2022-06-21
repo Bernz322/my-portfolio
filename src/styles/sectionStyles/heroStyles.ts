@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "styled-components/macro";
 
-export const StyledHero = styled.section`
+export const StyledHero = styled(motion.section)`
   height: calc(100vh - var(--nav-height));
   display: flex;
   align-content: center;

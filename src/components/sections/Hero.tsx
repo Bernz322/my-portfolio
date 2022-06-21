@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import { Button } from "..";
+import { fadeUp } from "../../config/animations";
 import { StyledHero } from "../../styles";
 
 const Hero = () => {
@@ -15,13 +17,33 @@ const Hero = () => {
 
   const texts = [one, two, three, four];
 
+  const variants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 1,
+        staggerChildren: 0.3,
+        when: "beforeChildren",
+      },
+    },
+  };
+
   return (
-    <StyledHero>
+    <StyledHero variants={variants} initial="hidden" animate="visible">
       <>
         {texts.map((text, i) => {
-          return <div key={i}>{text}</div>;
+          return (
+            <motion.div variants={fadeUp} key={i}>
+              {text}
+            </motion.div>
+          );
         })}
-        <Button buttonText="Get in Touch" buttonUrl="#contact" />
+        <motion.div variants={fadeUp}>
+          <Button buttonText="Get in Touch" buttonUrl="#contact" />
+        </motion.div>
       </>
     </StyledHero>
   );
