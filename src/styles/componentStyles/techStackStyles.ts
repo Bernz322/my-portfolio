@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "styled-components/macro";
 
-export const StyledTechStack = styled.ul`
+export const StyledTechStack = styled(motion.ul)`
   list-style: none;
   padding: 0;
   display: flex;
@@ -26,6 +27,10 @@ export const StyledTechStack = styled.ul`
     border: 1px solid ${(props) => props.theme.btn};
     border-radius: 5px;
     padding: 5px;
+    cursor: grab;
+    &:active {
+      cursor: grabbing;
+    }
     @media only screen and (max-width: 768px) {
       margin: 5px;
       padding: 2px;

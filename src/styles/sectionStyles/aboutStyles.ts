@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "styled-components/macro";
 
-export const StyledAbout = styled.section`
+export const StyledAbout = styled(motion.section)`
   margin-bottom: 40px;
   padding: 100px 0 0;
   .section-head {
@@ -19,7 +20,7 @@ export const StyledAbout = styled.section`
     margin: 0 0 25px;
 
     @media only screen and (max-width: 1100px) {
-      flex-flow: column-reverse nowrap;
+      flex-flow: column nowrap;
     }
 
     img {
@@ -28,6 +29,7 @@ export const StyledAbout = styled.section`
       object-fit: contain;
       filter: blur(3px) grayscale();
       border-radius: 10px;
+      margin-bottom: 15px;
 
       &:hover {
         filter: blur(0);
