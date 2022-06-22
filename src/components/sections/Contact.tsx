@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import { Button } from "..";
+import { fadeUp, sectionAnimateOnView } from "../../config/animations";
 import { StyledContact } from "../../styles";
 
 const Contact = () => {
@@ -16,15 +18,27 @@ const Contact = () => {
 
   const texts = [one, two];
   return (
-    <StyledContact id="contact">
+    <StyledContact
+      id="contact"
+      variants={sectionAnimateOnView}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
       <>
         {texts.map((text, i) => {
-          return <div key={i}>{text}</div>;
+          return (
+            <motion.div variants={fadeUp} key={i}>
+              {text}
+            </motion.div>
+          );
         })}
-        <Button
-          buttonText="Get in Touch"
-          buttonUrl="mailto:jeffrey.bernadas0@gmail.com"
-        />
+        <motion.div variants={fadeUp}>
+          <Button
+            buttonText="Get in Touch"
+            buttonUrl="mailto:jeffrey.bernadas0@gmail.com"
+          />
+        </motion.div>
       </>
     </StyledContact>
   );
