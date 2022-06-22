@@ -3,18 +3,45 @@ import { BiLinkExternal } from "react-icons/bi";
 import { StyledProject, StyledProjectContainer } from "../../styles";
 import { projects } from "../../config/data";
 import { Link } from "react-router-dom";
-import mantine from "../../assets/logo/mantine.svg";
+import {
+  sectionAnimateOnView,
+  fadeUp,
+  projectsIn,
+} from "../../config/animations";
+import { motion } from "framer-motion";
+// import mantine from "../../assets/logo/mantine.svg";
 
 const Project = () => {
   return (
-    <StyledProject id="projects">
-      <h3 className="section-head">
+    <StyledProject
+      id="projects"
+      variants={sectionAnimateOnView}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      <motion.h3
+        className="section-head"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         My Projects<span>.</span>
-      </h3>
-      <StyledProjectContainer>
+      </motion.h3>
+      <StyledProjectContainer
+        variants={sectionAnimateOnView}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         {projects.map((project) => {
           return (
-            <li className="project" key={project.name}>
+            <motion.li
+              variants={projectsIn}
+              className="project"
+              key={project.name}
+            >
               <Link to={`/${project.redirect}`}>
                 <img src={project.image} alt="project-img" />
               </Link>
@@ -41,7 +68,7 @@ const Project = () => {
                   </a>
                 </div>
               </div>
-            </li>
+            </motion.li>
           );
         })}
       </StyledProjectContainer>

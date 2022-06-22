@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "styled-components/macro";
 
-export const StyledProject = styled.section`
+export const StyledProject = styled(motion.section)`
   margin-bottom: 40px;
   padding: 100px 0 0;
   .section-head {
@@ -13,7 +14,7 @@ export const StyledProject = styled.section`
   }
 `;
 
-export const StyledProjectContainer = styled.ul`
+export const StyledProjectContainer = styled(motion.ul)`
   height: auto;
   width: 100%;
   display: grid;
