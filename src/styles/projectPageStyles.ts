@@ -24,6 +24,7 @@ export const StyledProjectPage = styled.div`
     margin: 0 auto;
     width: 100vw;
     height: 100%;
+    z-index: 999;
   }
 
   .top {
@@ -86,11 +87,12 @@ export const StyledProjectPage = styled.div`
   }
 
   .bottom {
-    img {
+    .image {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+    z-index: -10;
   }
 
   .project-info {

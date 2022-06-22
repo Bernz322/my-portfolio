@@ -11,6 +11,8 @@ import {
 import { motion } from "framer-motion";
 // import mantine from "../../assets/logo/mantine.svg";
 
+const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
+
 const Project = () => {
   return (
     <StyledProject
@@ -43,9 +45,18 @@ const Project = () => {
               key={project.name}
             >
               <Link to={`/${project.redirect}`}>
-                <img src={project.image} alt="project-img" />
+                <motion.img
+                  src={project.image}
+                  alt="project-img"
+                  whileHover={{ scale: 1.1 }}
+                  transition={transition}
+                />
               </Link>
-              <div className="desc">
+              <motion.div
+                className="desc"
+                exit={{ opacity: 0 }}
+                transition={transition}
+              >
                 <div className="project-title">
                   <p>{project.name}</p>
                 </div>
@@ -67,7 +78,7 @@ const Project = () => {
                     <BiLinkExternal className="icons" />
                   </a>
                 </div>
-              </div>
+              </motion.div>
             </motion.li>
           );
         })}

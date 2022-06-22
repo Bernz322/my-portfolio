@@ -1,7 +1,14 @@
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { BiLinkExternal } from "react-icons/bi";
 import { FiGithub } from "react-icons/fi";
 import { IconType } from "react-icons/lib";
 import { useNavigate } from "react-router-dom";
+import {
+  fadeUp,
+  PopUpFast,
+  sectionAnimateOnView,
+  stackAnimateOnView,
+} from "../../config/animations";
 import { IProjects } from "../../config/types";
 import { StyledProjectPage, StyledTechStack } from "../../styles";
 
@@ -15,8 +22,12 @@ interface IStack {
   Icon: IconType;
 }
 
+const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
+
 const SingleProject = ({ project, count }: IProps) => {
   const navigate = useNavigate();
+  const { scrollYProgress } = useViewportScroll();
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
 
   const handleClick = () => {
     navigate(-1);
@@ -57,30 +68,95 @@ const SingleProject = ({ project, count }: IProps) => {
           </div>
         </div>
         <div className="bottom">
-          <img src={project.image} alt="project-img" />
+          {/* <motion.div className="image-container-single">
+            <motion.div
+              initial={{
+                y: "-50%",
+                width: "300px",
+                height: "250px",
+              }}
+              animate={{
+                y: 0,
+                width: "100%",
+                height: window.innerWidth > 1440 ? 400 : 200,
+                transition: { delay: 0.2, ...transition },
+              }}
+              className="thumbnail-single"
+            >
+              <motion.div
+                className="frame-single"
+                whileHover="hover"
+                transition={transition}
+              >
+                <motion.img
+                  className="image"
+                  src={project.image}
+                  alt="project-img"
+                  // style={{ scale: scale }}
+                  initial={{ scale: 1.0 }}
+                  animate={{
+                    transition: { delay: 0.2, ...transition },
+                    y: window.innerWidth > 1440 ? -100 : -50,
+                  }}
+                />
+              </motion.div>
+            </motion.div>
+          </motion.div> */}
+          <img className="image" src={project.image} alt="project-img" />
         </div>
       </div>
-      <div className="project-info container">
-        <div className="description">
-          <h3 className="info-head">Project description</h3>
-          <p>{project.info}</p>
-        </div>
-        <div className="stacks">
-          <h3 className="info-head">Technologies used</h3>
-          <StyledTechStack>
+      <motion.div className="project-info container">
+        <motion.div
+          className="description"
+          variants={sectionAnimateOnView}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.h3 variants={fadeUp} className="info-head">
+            Project description
+          </motion.h3>
+          <motion.p variants={fadeUp}>{project.info}</motion.p>
+        </motion.div>
+        <motion.div
+          className="stacks"
+          variants={sectionAnimateOnView}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.h3 className="info-head" variants={fadeUp}>
+            Technologies used
+          </motion.h3>
+          <StyledTechStack
+            variants={stackAnimateOnView}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {project.techs.map(({ name, Icon }: IStack) => {
               return (
-                <li key={name}>
+                <motion.li
+                  key={name}
+                  variants={PopUpFast}
+                  drag
+                  dragConstraints={{
+                    left: 0,
+                    right: 0,
+                    top: 0,
+                    bottom: 0,
+                  }}
+                >
                   <div className="tech-content">
                     <Icon />
                     <p>{name}</p>
                   </div>
-                </li>
+                </motion.li>
               );
             })}
           </StyledTechStack>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </StyledProjectPage>
   );
 };

@@ -6,6 +6,7 @@ export const StyledSideElement = styled(motion.div)`
   align-items: center;
   justify-content: space-between;
   position: relative;
+  z-index: 9999;
 
   @media only screen and (max-width: 489px) {
     display: none;

@@ -60,7 +60,7 @@ function App() {
       </AnimatePresence>
 
       {isLoaded && (
-        <React.Fragment>
+        <AnimatePresence exitBeforeEnter>
           <Navbar />
           <SideElement />
           <ScrollToTop />
@@ -84,7 +84,7 @@ function App() {
           </Routes>
 
           <Footer />
-        </React.Fragment>
+        </AnimatePresence>
       )}
     </ThemeModeProvider>
   );

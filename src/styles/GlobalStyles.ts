@@ -15,7 +15,7 @@ const GlobalStyles = createGlobalStyle<ThemeProps>`
     }
     
     html{
-        scroll-behavior: smooth;
+        /* scroll-behavior: smooth; */
         box-sizing: inherit;
         scrollbar-width: thin;
     }

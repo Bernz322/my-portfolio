@@ -42,11 +42,6 @@ export const StyledProjectContainer = styled(motion.ul)`
   img {
     height: 100%;
     width: 100%;
-
-    &:hover {
-      transform: scale(1.1);
-      transition: var(--transition3);
-    }
   }
   .desc {
     width: 100%;
