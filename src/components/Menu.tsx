@@ -70,13 +70,15 @@ const Menu = ({ variants }: any) => {
         <aside className="sidebar">
           <nav>
             <ul className="nav-links-menu">
-              {navLinks.home.map(({ name, url }: NavLinksProps, i: number) => {
-                return (
-                  <li key={i} onClick={openHandler}>
-                    <a href={url}>{name}</a>
-                  </li>
-                );
-              })}
+              {navLinks.home.map(
+                ({ name, url }: NavLinksProps, index: number) => {
+                  return (
+                    <li key={index} onClick={openHandler}>
+                      <a href={url}>{name}</a>
+                    </li>
+                  );
+                }
+              )}
             </ul>
             <button className="resume-btn">Resume</button>
             <ThemeToggler />

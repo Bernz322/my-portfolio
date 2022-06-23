@@ -34,9 +34,9 @@ const Hero = () => {
   return (
     <StyledHero variants={variants} initial="hidden" animate="visible">
       <>
-        {texts.map((text, i) => {
+        {texts.map((text, index: number) => {
           return (
-            <motion.div variants={fadeUp} key={i}>
+            <motion.div variants={fadeUp} key={index}>
               {text}
             </motion.div>
           );

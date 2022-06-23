@@ -1,0 +1,28 @@
+{
+  "name": "Jeffrey Bernadas",
+  "short_name": "Jeff",
+  "icons": [
+    {
+      "src": "./favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "density": "4.0"
+    },
+    {
+      "src": "./favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./favicons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#79f6fc",
+  "background_color": "#001429",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}

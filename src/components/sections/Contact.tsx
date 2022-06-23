@@ -26,9 +26,9 @@ const Contact = () => {
       viewport={{ once: true }}
     >
       <>
-        {texts.map((text, i) => {
+        {texts.map((text, index: number) => {
           return (
-            <motion.div variants={fadeUp} key={i}>
+            <motion.div variants={fadeUp} key={index}>
               {text}
             </motion.div>
           );

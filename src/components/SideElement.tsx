@@ -19,10 +19,10 @@ const SideElement = () => {
     <StyledSideElement variants={variants} initial="hidden" animate="visible">
       <motion.div className="left" variants={fadeLeft}>
         <ul>
-          {socialLinks.map((social: any) => {
-            const { name, url, Icon } = social;
+          {socialLinks.map((social: any, index: number) => {
+            const { url, Icon } = social;
             return (
-              <li key={name}>
+              <li key={index}>
                 <motion.a
                   drag
                   dragConstraints={{

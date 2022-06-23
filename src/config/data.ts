@@ -36,7 +36,7 @@ import {
 } from "react-icons/si";
 import { INavLinks, IProjects, ISocialLinks, ITechs } from "./types";
 import { vacay, jbshort, spotify, tsismis, thesis } from "../assets/projects/";
-import mantine from "../assets/logo/mantine.svg";
+// import mantine from "../assets/logo/mantine.svg";
 export const navLinks: INavLinks = {
   home: [
     {

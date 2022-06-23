@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: 
+Crawl-delay: 10
+Sitemap: https://jeffreybernadas.tech/
+Sitemap: https://jeffreybernadas.tech/vacay
+Sitemap: https://jeffreybernadas.tech/jbshort
+Sitemap: https://jeffreybernadas.tech/spotify
+Sitemap: https://jeffreybernadas.tech/tsismis
+Sitemap: https://jeffreybernadas.tech/thesis

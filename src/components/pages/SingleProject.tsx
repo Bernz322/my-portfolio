@@ -102,7 +102,13 @@ const SingleProject = ({ project, count }: IProps) => {
               </motion.div>
             </motion.div>
           </motion.div> */}
-          <img className="image" src={project.image} alt="project-img" />
+          <img
+            title={project.name}
+            loading="lazy"
+            className="image"
+            src={project.image}
+            alt="project-img"
+          />
         </div>
       </div>
       <motion.div className="project-info container">
@@ -134,10 +140,10 @@ const SingleProject = ({ project, count }: IProps) => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {project.techs.map(({ name, Icon }: IStack) => {
+            {project.techs.map(({ name, Icon }: IStack, index: number) => {
               return (
                 <motion.li
-                  key={name}
+                  key={index}
                   variants={PopUpFast}
                   drag
                   dragConstraints={{

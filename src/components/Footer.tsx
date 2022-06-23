@@ -6,10 +6,10 @@ const Footer = () => {
     <StyledFooter>
       <div className="socials">
         <ul>
-          {socialLinks.map((social: any) => {
-            const { name, url, Icon } = social;
+          {socialLinks.map((social: any, index: number) => {
+            const { url, Icon } = social;
             return (
-              <li key={name}>
+              <li key={index}>
                 <a href={url} target="_blank" rel="noreferrer">
                   <Icon className="side-icons" />
                 </a>

@@ -44,6 +44,7 @@ const About = () => {
         viewport={{ once: true }}
       >
         <motion.img
+          loading="lazy"
           src={profile}
           alt="me"
           variants={fadeUp}
@@ -61,9 +62,9 @@ const About = () => {
           <motion.h4 className="sub-head" variants={fadeUp}>
             Jeffrey Bernadas
           </motion.h4>
-          {desc.map((desc, i) => {
+          {desc.map((desc, index: number) => {
             return (
-              <motion.p key={i} className="desc" variants={fadeUp}>
+              <motion.p key={index} className="desc" variants={fadeUp}>
                 {desc}
               </motion.p>
             );
@@ -89,10 +90,10 @@ const About = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {techs.map(({ id, name, Icon }: ITechs) => {
+          {techs.map(({ name, Icon }: ITechs, index: number) => {
             return (
               <motion.li
-                key={id}
+                key={index}
                 variants={PopUpFast}
                 drag
                 dragConstraints={{

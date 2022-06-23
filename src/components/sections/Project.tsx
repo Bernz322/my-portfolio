@@ -37,15 +37,12 @@ const Project = () => {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {projects.map((project) => {
+        {projects.map((project, index: number) => {
           return (
-            <motion.li
-              variants={projectsIn}
-              className="project"
-              key={project.name}
-            >
+            <motion.li variants={projectsIn} className="project" key={index}>
               <Link to={`/${project.redirect}`}>
                 <motion.img
+                  loading="lazy"
                   src={project.image}
                   alt="project-img"
                   whileHover={{ scale: 1.1 }}

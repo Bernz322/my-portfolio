@@ -3,7 +3,7 @@ import { GlobalStyles, StyledMain } from "./styles";
 import {
   About,
   Contact,
-  Cursor,
+  // Cursor,
   Footer,
   Hero,
   JBShort,

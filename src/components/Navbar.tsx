@@ -89,13 +89,15 @@ const Navbar = () => {
         </motion.div>
         <div className="nav-right">
           <ul className="nav-links">
-            {navLinks.home.map(({ name, url }: NavLinksProps, i: number) => {
-              return (
-                <motion.li key={i} variants={navLinkVariants}>
-                  <a href={url}>{name}</a>
-                </motion.li>
-              );
-            })}
+            {navLinks.home.map(
+              ({ name, url }: NavLinksProps, index: number) => {
+                return (
+                  <motion.li key={index} variants={navLinkVariants}>
+                    <a href={url}>{name}</a>
+                  </motion.li>
+                );
+              }
+            )}
           </ul>
           <motion.button variants={navLinkVariants} className="resume-btn">
             Resume
