@@ -8,6 +8,7 @@ import {
   Hero,
   JBShort,
   Navbar,
+  Page404,
   Preloader,
   Project,
   SideElement,
@@ -81,6 +82,7 @@ function App() {
             <Route path="/spotify" element={<Spotify />} />
             <Route path="/tsismis" element={<Tsismis />} />
             <Route path="/thesis" element={<Thesis />} />
+            <Route path="*" element={<Page404 />} />
           </Routes>
 
           <Footer />

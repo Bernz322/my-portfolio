@@ -21,3 +21,4 @@ export { default as JBShort } from "./pages/JBShort";
 export { default as Spotify } from "./pages/Spotify";
 export { default as Tsismis } from "./pages/Tsismis";
 export { default as Thesis } from "./pages/Thesis";
+export { default as Page404 } from "./pages/Page404";
