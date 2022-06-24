@@ -137,7 +137,7 @@ export const StyledProjectPage = styled.div`
 
   .info-head {
     font-size: clamp(25px, 2vw, 40px);
-    color: ${(props) => props.theme.color3};
+    color: ${(props) => props.theme.color2};
     text-align: center;
   }
 `;
