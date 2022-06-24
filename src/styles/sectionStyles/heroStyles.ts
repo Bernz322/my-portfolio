@@ -12,8 +12,12 @@ export const StyledHero = styled(motion.section)`
     padding-bottom: 150px;
   }
 
-  @media only screen and (max-height: 700px) {
+  @media only screen and (max-height: 800px) {
     margin-top: 75px;
+  }
+
+  @media only screen and (max-height: 595px) {
+    margin-top: 150px;
   }
 
   @media only screen and (max-width: 489px) {
