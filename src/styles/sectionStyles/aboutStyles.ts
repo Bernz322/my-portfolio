@@ -58,7 +58,7 @@ export const StyledAbout = styled(motion.section)`
   }
 
   .desc {
-    text-align: left;
+    text-align: justify;
   }
 
   .tech-desc {
