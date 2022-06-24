@@ -29,7 +29,7 @@ export const StyledProjectPage = styled.div`
 
   .top {
     padding: 0 150px;
-    height: 50vh;
+    height: calc(50vh - var(--nav-height));
     max-width: var(--site-max-width);
     margin: 0 auto;
     display: flex;
