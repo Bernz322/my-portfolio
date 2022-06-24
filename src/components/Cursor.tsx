@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { StyledCursor } from "../styles";
 
-const Cursor = () => {
+function Cursor() {
   const cursorRef: any = useRef(null);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const Cursor = () => {
     });
   }, []);
 
-  return <StyledCursor className="app-cursor" ref={cursorRef}></StyledCursor>;
-};
+  return <StyledCursor className="app-cursor" ref={cursorRef} />;
+}
 
 export default Cursor;

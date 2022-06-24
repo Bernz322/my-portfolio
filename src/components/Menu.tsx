@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import styled from "styled-components/macro";
-import { ThemeToggler } from ".";
+import ThemeToggler from "./ThemeToggler";
 import { navLinks } from "../config/data";
 import { NavLinksProps } from "../config/types";
 import { StyledSideNav } from "../styles";
@@ -44,7 +44,7 @@ const StyledBurger = styled(motion.div)<{ open: boolean }>`
   }
 `;
 
-const Menu = ({ variants }: any) => {
+function Menu({ variants }: any) {
   const [open, setOpen] = useState<boolean>(false);
   const openHandler = () => {
     setOpen(!open);
@@ -61,32 +61,35 @@ const Menu = ({ variants }: any) => {
   return (
     <>
       <StyledBurger open={open} onClick={openHandler} variants={variants}>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div />
+        <div />
+        <div />
       </StyledBurger>
       <StyledSideNav open={open}>
-        <div className="menu-blur" onClick={openHandler}></div>
+        <div
+          className="menu-blur"
+          onClick={openHandler}
+          role="menu"
+          tabIndex={0}
+        />
         <aside className="sidebar">
           <nav>
             <ul className="nav-links-menu">
-              {navLinks.home.map(
-                ({ name, url }: NavLinksProps, index: number) => {
-                  return (
-                    <li key={index} onClick={openHandler}>
-                      <a href={url}>{name}</a>
-                    </li>
-                  );
-                }
-              )}
+              {navLinks.home.map(({ name, url }: NavLinksProps) => (
+                <li key={name} onClick={openHandler} role="menuitem">
+                  <a href={url}>{name}</a>
+                </li>
+              ))}
             </ul>
-            <button className="resume-btn">Resume</button>
+            <button type="button" className="resume-btn">
+              Resume
+            </button>
             <ThemeToggler />
           </nav>
         </aside>
       </StyledSideNav>
     </>
   );
-};
+}
 
 export default Menu;

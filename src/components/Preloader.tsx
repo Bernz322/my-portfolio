@@ -47,7 +47,7 @@ const pathVariants = {
   },
 };
 
-const Preloader = () => {
+function Preloader() {
   const { theme } = useContext(ThemeModeContext);
   return (
     <StyledPreLoader>
@@ -93,6 +93,6 @@ const Preloader = () => {
       </motion.svg>
     </StyledPreLoader>
   );
-};
+}
 
 export default Preloader;

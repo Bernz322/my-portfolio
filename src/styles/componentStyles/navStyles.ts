@@ -5,7 +5,7 @@ interface IStyledNav {
   $show: any;
 }
 
-export const StyledNav = styled(motion.header)<IStyledNav>`
+const StyledNav = styled(motion.header)<IStyledNav>`
   height: var(--nav-height);
   display: flex;
   align-items: center;
@@ -97,3 +97,4 @@ export const StyledNav = styled(motion.header)<IStyledNav>`
     }
   }
 `;
+export default StyledNav;

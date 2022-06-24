@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components/macro";
 
-export const StyledAbout = styled(motion.section)`
+const StyledAbout = styled(motion.section)`
   margin-bottom: 40px;
   padding: 100px 0 0;
   .section-head {
@@ -65,3 +65,5 @@ export const StyledAbout = styled(motion.section)`
     text-align: center;
   }
 `;
+
+export default StyledAbout;

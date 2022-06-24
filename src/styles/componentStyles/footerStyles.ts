@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 
-export const StyledFooter = styled.footer`
+const StyledFooter = styled.footer`
   width: 100vw;
   max-height: 105px;
   display: flex;
@@ -63,3 +63,4 @@ export const StyledFooter = styled.footer`
     }
   }
 `;
+export default StyledFooter;

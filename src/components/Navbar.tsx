@@ -1,14 +1,15 @@
 import { useCallback, useContext, useEffect, useState } from "react";
+import { motion, Variants } from "framer-motion";
 import { StyledNav } from "../styles";
 import logo from "../assets/logo/logo.png";
 import logo1 from "../assets/logo/logo1.png";
 import { navLinks } from "../config/data";
 import { NavLinksProps } from "../config/types";
-import { Menu, ThemeToggler } from ".";
+import Menu from "./Menu";
+import ThemeToggler from "./ThemeToggler";
 import { ThemeModeContext } from "../context/ThemeContext";
-import { motion, Variants } from "framer-motion";
 
-const Navbar = () => {
+function Navbar() {
   const { theme } = useContext(ThemeModeContext);
   const [navShow, setNavShow] = useState<boolean>(true);
   const [lastScrollY, setLastScrollY] = useState<number>(0);
@@ -89,15 +90,11 @@ const Navbar = () => {
         </motion.div>
         <div className="nav-right">
           <ul className="nav-links">
-            {navLinks.home.map(
-              ({ name, url }: NavLinksProps, index: number) => {
-                return (
-                  <motion.li key={index} variants={navLinkVariants}>
-                    <a href={url}>{name}</a>
-                  </motion.li>
-                );
-              }
-            )}
+            {navLinks.home.map(({ name, url }: NavLinksProps) => (
+              <motion.li key={name} variants={navLinkVariants}>
+                <a href={url}>{name}</a>
+              </motion.li>
+            ))}
           </ul>
           <motion.button variants={navLinkVariants} className="resume-btn">
             Resume
@@ -108,6 +105,6 @@ const Navbar = () => {
       </motion.nav>
     </StyledNav>
   );
-};
+}
 
 export default Navbar;

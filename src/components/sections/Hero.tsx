@@ -1,19 +1,25 @@
 import { motion } from "framer-motion";
-import { Button } from "..";
+import Button from "../Button";
 import { fadeUp } from "../../config/animations";
 import { StyledHero } from "../../styles";
 
-const Hero = () => {
-  const one = <h1 className="intro">Hi, I am</h1>;
-  const two = <h2 className="heading">Jeffrey Bernadas.</h2>;
-  const three = <h3 className="sub-heading">I craft things from scratch.</h3>;
-  const four = (
-    <p>
-      I‘m an aspiring Software Engineer based in the Philippines. I can do
-      full-stack web applications and love building stuffs in the internet from
-      scratch.
-    </p>
-  );
+function Hero() {
+  const one = { id: 0, data: <h1 className="intro">Hi, I am</h1> };
+  const two = { id: 1, data: <h2 className="heading">Jeffrey Bernadas.</h2> };
+  const three = {
+    id: 2,
+    data: <h3 className="sub-heading">I craft things from scratch.</h3>,
+  };
+  const four = {
+    id: 3,
+    data: (
+      <p>
+        I‘m an aspiring Software Engineer based in the Philippines. I can do
+        full-stack web applications and love building stuffs in the internet
+        from scratch.
+      </p>
+    ),
+  };
 
   const texts = [one, two, three, four];
 
@@ -34,19 +40,17 @@ const Hero = () => {
   return (
     <StyledHero variants={variants} initial="hidden" animate="visible">
       <>
-        {texts.map((text, index: number) => {
-          return (
-            <motion.div variants={fadeUp} key={index}>
-              {text}
-            </motion.div>
-          );
-        })}
+        {texts.map((text) => (
+          <motion.div variants={fadeUp} key={text.id}>
+            {text.data}
+          </motion.div>
+        ))}
         <motion.div variants={fadeUp}>
           <Button buttonText="Get in Touch" buttonUrl="#contact" />
         </motion.div>
       </>
     </StyledHero>
   );
-};
+}
 
 export default Hero;

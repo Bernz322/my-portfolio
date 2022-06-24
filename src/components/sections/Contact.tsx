@@ -1,20 +1,27 @@
 import { motion } from "framer-motion";
-import { Button } from "..";
+import Button from "../Button";
 import { fadeUp, sectionAnimateOnView } from "../../config/animations";
 import { StyledContact } from "../../styles";
 
-const Contact = () => {
-  const one = (
-    <h3 className="section-head">
-      Get In Touch<span>.</span>
-    </h3>
-  );
-  const two = (
-    <p>
-      I’m currently looking and is open for any opportunities. Send me a message
-      and let's talk!
-    </p>
-  );
+function Contact() {
+  const one = {
+    id: 0,
+    data: (
+      <h3 className="section-head">
+        Get In Touch
+        <span>.</span>
+      </h3>
+    ),
+  };
+  const two = {
+    id: 1,
+    data: (
+      <p>
+        I’m currently looking and is open for any opportunities. Send me a
+        message and let&apos;s talk!
+      </p>
+    ),
+  };
 
   const texts = [one, two];
   return (
@@ -26,13 +33,11 @@ const Contact = () => {
       viewport={{ once: true }}
     >
       <>
-        {texts.map((text, index: number) => {
-          return (
-            <motion.div variants={fadeUp} key={index}>
-              {text}
-            </motion.div>
-          );
-        })}
+        {texts.map((text) => (
+          <motion.div variants={fadeUp} key={text.id}>
+            {text.data}
+          </motion.div>
+        ))}
         <motion.div variants={fadeUp}>
           <Button
             buttonText="Get in Touch"
@@ -42,6 +47,6 @@ const Contact = () => {
       </>
     </StyledContact>
   );
-};
+}
 
 export default Contact;

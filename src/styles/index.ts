@@ -1,22 +1,22 @@
 export { default as GlobalStyles } from "./GlobalStyles";
-export { StyledProjectPage } from "./projectPageStyles";
+export { default as StyledProjectPage } from "./projectPageStyles";
 
 // Component Styles
-export { StyledNav } from "./componentStyles/navStyles";
-export { StyledToggler } from "./componentStyles/toggleStyles";
-export { StyledSideNav } from "./componentStyles/sideNavStyles";
-export { StyledMain } from "./componentStyles/mainStyles";
-export { StyledSideElement } from "./componentStyles/sideElementStyles";
-export { StyledCursor } from "./componentStyles/cursorStyles";
-export { StyledButton } from "./componentStyles/buttonStyles";
-export { StyledFooter } from "./componentStyles/footerStyles";
-export { StyledTechStack } from "./componentStyles/techStackStyles";
+export { default as StyledNav } from "./componentStyles/navStyles";
+export { default as StyledToggler } from "./componentStyles/toggleStyles";
+export { default as StyledSideNav } from "./componentStyles/sideNavStyles";
+export { default as StyledMain } from "./componentStyles/mainStyles";
+export { default as StyledSideElement } from "./componentStyles/sideElementStyles";
+export { default as StyledCursor } from "./componentStyles/cursorStyles";
+export { default as StyledButton } from "./componentStyles/buttonStyles";
+export { default as StyledFooter } from "./componentStyles/footerStyles";
+export { default as StyledTechStack } from "./componentStyles/techStackStyles";
 
 // Section Styles
-export { StyledHero } from "./sectionStyles/heroStyles";
-export { StyledAbout } from "./sectionStyles/aboutStyles";
+export { default as StyledHero } from "./sectionStyles/heroStyles";
+export { default as StyledAbout } from "./sectionStyles/aboutStyles";
 export {
   StyledProject,
   StyledProjectContainer,
 } from "./sectionStyles/projectStyles";
-export { StyledContact } from "./sectionStyles/contactStyles";
+export { default as StyledContact } from "./sectionStyles/contactStyles";

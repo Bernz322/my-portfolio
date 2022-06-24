@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useMemo } from "react";
 import { ThemeProvider } from "styled-components/macro";
 import { useDarkMode } from "../hooks/useDarkMode";
 import { lightTheme, darkTheme } from "../styles/theme";
@@ -14,12 +14,19 @@ type ThemeContextProviderProps = {
 
 export const ThemeModeContext = createContext({} as IThemeModeContext);
 
-export const ThemeModeProvider = ({ children }: ThemeContextProviderProps) => {
+export function ThemeModeProvider({ children }: ThemeContextProviderProps) {
   const [theme, themeToggler] = useDarkMode();
   const ThemeMode = theme === "light" ? lightTheme : darkTheme;
+  const globalContextValue = useMemo(
+    () => ({
+      theme,
+      themeToggler,
+    }),
+    [theme, themeToggler]
+  );
   return (
-    <ThemeModeContext.Provider value={{ themeToggler, theme }}>
+    <ThemeModeContext.Provider value={globalContextValue}>
       <ThemeProvider theme={ThemeMode}>{children}</ThemeProvider>
     </ThemeModeContext.Provider>
   );
-};
+}

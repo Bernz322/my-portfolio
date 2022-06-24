@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { GlobalStyles, StyledMain } from "./styles";
 import {
   About,
@@ -18,18 +20,15 @@ import {
   Vacay,
 } from "./components";
 import { ThemeModeProvider } from "./context/ThemeContext";
-// import "./styles/fonts.css";
-import { AnimatePresence, motion } from "framer-motion";
-import { Route, Routes, useLocation } from "react-router-dom";
 
-const ScrollToTop = () => {
+function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
   return null;
-};
+}
 
 function App() {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);

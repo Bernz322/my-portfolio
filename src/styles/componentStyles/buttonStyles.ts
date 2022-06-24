@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 
-export const StyledButton = styled.a`
+const StyledButton = styled.a`
   position: relative;
   font-size: var(--fz-sm);
   text-transform: uppercase;
@@ -86,3 +86,4 @@ export const StyledButton = styled.a`
     }
   }
 `;
+export default StyledButton;

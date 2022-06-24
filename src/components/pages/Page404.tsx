@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components/macro";
-import { Button } from "..";
+import Button from "../Button";
 
 const StyledPage404 = styled.div`
   height: calc(100vh - 130px);
@@ -43,7 +43,7 @@ const StyledPage404 = styled.div`
   }
 `;
 
-const Page404 = () => {
+function Page404() {
   const navigate = useNavigate();
   const [redirect, setRedirect] = useState<number>(15);
 
@@ -61,13 +61,14 @@ const Page404 = () => {
       <h3>You got lost!</h3>
       <p>
         You will be redirected to the homepage in{" "}
-        <span className="sec">{redirect}</span>s.
+        <span className="sec">{redirect}</span>
+        s.
       </p>
       <div className="btn">
         <Button buttonText="Go Home" buttonUrl="/" />
       </div>
     </StyledPage404>
   );
-};
+}
 
 export default Page404;

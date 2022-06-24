@@ -1,7 +1,6 @@
-import { motion, useTransform, useViewportScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import { BiLinkExternal } from "react-icons/bi";
 import { FiGithub } from "react-icons/fi";
-import { IconType } from "react-icons/lib";
 import { useNavigate } from "react-router-dom";
 import {
   fadeUp,
@@ -17,17 +16,12 @@ interface IProps {
   count: number;
 }
 
-interface IStack {
-  name: string;
-  Icon: IconType;
-}
+// const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
-const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
-
-const SingleProject = ({ project, count }: IProps) => {
+function SingleProject({ project, count }: IProps) {
   const navigate = useNavigate();
-  const { scrollYProgress } = useViewportScroll();
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
+  // const { scrollYProgress } = useViewportScroll();
+  // const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
 
   const handleClick = () => {
     navigate(-1);
@@ -40,7 +34,12 @@ const SingleProject = ({ project, count }: IProps) => {
             <div className="head">
               <p>
                 {" "}
-                <span className="back-to-home" onClick={handleClick}>
+                <span
+                  className="back-to-home"
+                  onClick={handleClick}
+                  role="button"
+                  tabIndex={0}
+                >
                   Back
                 </span>{" "}
                 / Project #{count}
@@ -140,31 +139,29 @@ const SingleProject = ({ project, count }: IProps) => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {project.techs.map(({ name, Icon }: IStack, index: number) => {
-              return (
-                <motion.li
-                  key={index}
-                  variants={PopUpFast}
-                  drag
-                  dragConstraints={{
-                    left: 0,
-                    right: 0,
-                    top: 0,
-                    bottom: 0,
-                  }}
-                >
-                  <div className="tech-content">
-                    <Icon />
-                    <p>{name}</p>
-                  </div>
-                </motion.li>
-              );
-            })}
+            {project.techs.map(({ name, Icon }) => (
+              <motion.li
+                key={name}
+                variants={PopUpFast}
+                drag
+                dragConstraints={{
+                  left: 0,
+                  right: 0,
+                  top: 0,
+                  bottom: 0,
+                }}
+              >
+                <div className="tech-content">
+                  <Icon />
+                  <p>{name}</p>
+                </div>
+              </motion.li>
+            ))}
           </StyledTechStack>
         </motion.div>
       </motion.div>
     </StyledProjectPage>
   );
-};
+}
 
 export default SingleProject;

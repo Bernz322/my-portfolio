@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 
-export const StyledProjectPage = styled.div`
+const StyledProjectPage = styled.div`
   max-height: auto;
   display: flex;
   align-content: center;
@@ -141,3 +141,4 @@ export const StyledProjectPage = styled.div`
     text-align: center;
   }
 `;
+export default StyledProjectPage;

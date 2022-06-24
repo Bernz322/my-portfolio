@@ -1,15 +1,15 @@
 import { socialLinks } from "../config/data";
 import { StyledFooter } from "../styles";
 
-const Footer = () => {
+function Footer() {
   return (
     <StyledFooter>
       <div className="socials">
         <ul>
-          {socialLinks.map((social: any, index: number) => {
-            const { url, Icon } = social;
+          {socialLinks.map((social: any) => {
+            const { name, url, Icon } = social;
             return (
-              <li key={index}>
+              <li key={name}>
                 <a href={url} target="_blank" rel="noreferrer">
                   <Icon className="side-icons" />
                 </a>
@@ -29,6 +29,6 @@ const Footer = () => {
       <p>{new Date().getFullYear()}</p>
     </StyledFooter>
   );
-};
+}
 
 export default Footer;

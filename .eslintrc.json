@@ -1,0 +1,67 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest":true
+    },
+    "extends": [
+        "react-app",
+        "react-app/jest",
+        "airbnb",
+        "airbnb-typescript",
+        "plugin:import/typescript",
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project":"./tsconfig.json"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "rules": {
+        "linebreak-style": 0,
+        "react/jsx-uses-react":["off"],
+        "react/react-in-jsx-scope":["off"],
+        "react/jsx-props-no-spreading":["warn"],
+        "no-shadow":["off"],
+        "jsx-a11y/click-events-have-key-events": "off",
+        "import/no-cycle": [2, { "maxDepth": 2 }],
+        "import/order": 2,
+        "no-noninteractive-element-to-interactive-role": [
+            "off",
+            {
+              "div":["menu"],
+              "ul": ["listbox", "menu", "menubar", "radiogroup", "tablist", "tree", "treegrid"],
+              "ol": ["listbox", "menu", "menubar", "radiogroup", "tablist", "tree", "treegrid"],
+              "li": ["menuitem", "option", "row", "tab", "treeitem"],
+              "table": ["grid"],
+              "td": ["gridcell"],
+              "span":["button"]
+            }
+          ],
+        "quotes":[
+            "error",
+            "double",
+            {"avoidEscape":true}
+        ],
+        "@typescript-eslint/quotes":[
+            "error",
+            "double",
+            {"avoidEscape":true}
+        ],
+        "prettier/prettier": [
+            "error",
+            {
+              "endOfLine": "auto"
+            }
+          ]
+    }
+}

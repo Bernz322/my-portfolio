@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 
-export const StyledCursor = styled.div`
+const StyledCursor = styled.div`
   z-index: 10000;
   border-radius: var(--border-radius-circle);
   width: 32px;
@@ -15,3 +15,4 @@ export const StyledCursor = styled.div`
     color: red;
   }
 `;
+export default StyledCursor;

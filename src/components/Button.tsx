@@ -5,13 +5,13 @@ interface IButton {
   buttonUrl: string;
 }
 
-const Button = ({ buttonText, buttonUrl }: IButton) => {
+function Button({ buttonText, buttonUrl }: IButton) {
   return (
     <StyledButton href={buttonUrl}>
       <span>{buttonText}</span>
-      <i></i>
+      <i />
     </StyledButton>
   );
-};
+}
 
 export default Button;

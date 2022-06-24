@@ -13,13 +13,25 @@ export const useDarkMode = () => {
 
   //   For toggling theme mode
   const themeToggler = (): void => {
-    theme === "light" ? setMode("dark") : setMode("light");
+    if (theme === "light") {
+      setMode("dark");
+    } else {
+      setMode("light");
+    }
+    // theme === "light" ? setMode("dark") : setMode("light");
   };
 
   //   For checking the theme every rerender
   useEffect(() => {
-    const theme: ThemeMode = window.localStorage.getItem("theme") as ThemeMode;
-    theme ? setTheme(theme) : setTheme("light");
+    const currentTheme: ThemeMode = window.localStorage.getItem(
+      "theme"
+    ) as ThemeMode;
+    if (currentTheme) {
+      setTheme(currentTheme);
+    } else {
+      setTheme("light");
+    }
+    // currentTheme ? setTheme(theme) : setTheme("light");
   }, []);
 
   return [theme, themeToggler];

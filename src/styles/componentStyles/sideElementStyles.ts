@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components/macro";
 
-export const StyledSideElement = styled(motion.div)`
+const StyledSideElement = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -101,3 +101,4 @@ export const StyledSideElement = styled(motion.div)`
     }
   }
 `;
+export default StyledSideElement;

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components/macro";
 
-export const StyledTechStack = styled(motion.ul)`
+const StyledTechStack = styled(motion.ul)`
   list-style: none;
   padding: 0;
   display: flex;
@@ -58,3 +58,4 @@ export const StyledTechStack = styled(motion.ul)`
     }
   }
 `;
+export default StyledTechStack;

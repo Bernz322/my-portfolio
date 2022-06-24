@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 
-export const StyledMain = styled.main`
+const StyledMain = styled.main`
   width: 100%;
   max-width: var(--site-max-width);
   max-height: auto;
@@ -18,3 +18,4 @@ export const StyledMain = styled.main`
     padding: 0 25px;
   }
 `;
+export default StyledMain;

@@ -3,7 +3,7 @@ import { RiSunLine, RiMoonClearLine } from "react-icons/ri";
 import { ThemeModeContext } from "../context/ThemeContext";
 import { StyledToggler } from "../styles";
 
-const ThemeToggler = ({ variants }: any) => {
+function ThemeToggler({ variants }: any) {
   const { theme, themeToggler } = useContext(ThemeModeContext);
 
   return (
@@ -24,6 +24,6 @@ const ThemeToggler = ({ variants }: any) => {
       )}
     </StyledToggler>
   );
-};
+}
 
 export default ThemeToggler;

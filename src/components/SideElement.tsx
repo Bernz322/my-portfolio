@@ -3,7 +3,7 @@ import { fadeLeft, fadeRight } from "../config/animations";
 import { socialLinks } from "../config/data";
 import { StyledSideElement } from "../styles";
 
-const SideElement = () => {
+function SideElement() {
   const variants = {
     hidden: {
       opacity: 0,
@@ -19,10 +19,10 @@ const SideElement = () => {
     <StyledSideElement variants={variants} initial="hidden" animate="visible">
       <motion.div className="left" variants={fadeLeft}>
         <ul>
-          {socialLinks.map((social: any, index: number) => {
-            const { url, Icon } = social;
+          {socialLinks.map((social: any) => {
+            const { name, url, Icon } = social;
             return (
-              <li key={index}>
+              <li key={name}>
                 <motion.a
                   drag
                   dragConstraints={{
@@ -53,6 +53,6 @@ const SideElement = () => {
       </motion.div>
     </StyledSideElement>
   );
-};
+}
 
 export default SideElement;

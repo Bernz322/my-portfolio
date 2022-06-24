@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 import { motion } from "framer-motion";
 
-export const StyledToggler = styled(motion.div)`
+const StyledToggler = styled(motion.div)`
   cursor: pointer;
   height: 25px;
   width: 25px;
@@ -18,3 +18,4 @@ export const StyledToggler = styled(motion.div)`
     }
   }
 `;
+export default StyledToggler;
