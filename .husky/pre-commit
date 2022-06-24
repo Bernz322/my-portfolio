@@ -3,7 +3,7 @@
 
 npm run lint ||
     (
-        echo '❌ ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
+        echo '❌ ESLint Check Failed. Make the required changes listed above. Add those changes and try to commit again.'
         false
     )
 echo '✅ All checks passed.'
