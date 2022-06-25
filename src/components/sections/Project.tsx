@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { FiGithub } from "react-icons/fi";
 import { BiLinkExternal } from "react-icons/bi";
 import { Link } from "react-router-dom";
@@ -9,11 +10,12 @@ import {
   fadeUp,
   projectsIn,
 } from "../../config/animations";
-// import mantine from "../../assets/logo/mantine.svg";
+import { ThemeModeContext } from "../../context/ThemeContext";
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
 function Project() {
+  const { theme } = useContext(ThemeModeContext);
   return (
     <StyledProject
       id="projects"
@@ -47,7 +49,11 @@ function Project() {
             <Link to={`/${project.redirect}`}>
               <motion.img
                 loading="lazy"
-                src={project.image}
+                src={
+                  theme === "light"
+                    ? project.ogImage.light
+                    : project.ogImage.dark
+                }
                 alt="project-img"
                 whileHover={{ scale: 1.1 }}
                 transition={transition}

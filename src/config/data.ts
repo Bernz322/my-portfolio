@@ -26,16 +26,26 @@ import {
   SiJavascript,
   SiFramer,
   SiExpress,
-  SiPostman,
   SiMapbox,
   SiSpotify,
   SiSocketdotio,
   SiOpencv,
   SiGooglecalendar,
   SiMega,
+  SiJsonwebtokens,
 } from "react-icons/si";
 import { INavLinks, IProjects, ISocialLinks, ITechs } from "./types";
-import { vacay, jbshort, spotify, tsismis, thesis } from "../assets/projects";
+import {
+  DarkOGVacay,
+  LightOGVacay,
+  DarkOGJB,
+  LightOGJB,
+  OGSpotify,
+  DarkOGTsismis,
+  LightOGTsismis,
+  LightOGThesis,
+  DarkOGThesis,
+} from "../assets/projects";
 // import mantine from "../assets/logo/mantine.svg";
 export const navLinks: INavLinks = {
   home: [
@@ -52,6 +62,7 @@ export const navLinks: INavLinks = {
       url: "/#contact",
     },
   ],
+  project: [{ name: "Home", url: "/" }],
 };
 
 export const socialLinks: ISocialLinks[] = [
@@ -85,7 +96,7 @@ export const socialLinks: ISocialLinks[] = [
 export const techs: ITechs[] = [
   {
     id: "html5",
-    name: "HTML5",
+    name: "HTML",
     Icon: AiOutlineHtml5,
   },
   {
@@ -169,9 +180,9 @@ export const techs: ITechs[] = [
     Icon: AiFillApi,
   },
   {
-    id: "postman",
-    name: "Postman",
-    Icon: SiPostman,
+    id: "jsonwebtoken",
+    name: "JWT",
+    Icon: SiJsonwebtokens,
   },
   {
     id: "github",
@@ -199,7 +210,10 @@ export const projects: IProjects[] = [
   {
     name: "Vacay",
     info: "A web app for hosting rooms within CARAGA Region for free. Comes with map pinning support, listing dashboard, reservations, and many more.",
-    image: vacay,
+    ogImage: {
+      dark: DarkOGVacay,
+      light: LightOGVacay,
+    },
     redirect: "vacay",
     techs: [
       {
@@ -227,6 +241,14 @@ export const projects: IProjects[] = [
         Icon: SiExpress,
       },
       {
+        name: "RESTful API",
+        Icon: AiFillApi,
+      },
+      {
+        name: "JWT",
+        Icon: SiJsonwebtokens,
+      },
+      {
         name: "Sequelize ORM",
         Icon: SiSequelize,
       },
@@ -243,7 +265,10 @@ export const projects: IProjects[] = [
   {
     name: "JBShort",
     info: "A free URL shortener web app with customizable short URL.",
-    image: jbshort,
+    ogImage: {
+      dark: DarkOGJB,
+      light: LightOGJB,
+    },
     redirect: "jbshort",
     techs: [
       {
@@ -267,6 +292,10 @@ export const projects: IProjects[] = [
         Icon: SiExpress,
       },
       {
+        name: "RESTful API",
+        Icon: AiFillApi,
+      },
+      {
         name: "MongoDB",
         Icon: SiMongodb,
       },
@@ -279,7 +308,10 @@ export const projects: IProjects[] = [
   {
     name: "Spotify Viewer",
     info: "A web app for showing your personal Spotify data such as playlists, top artists, and top tracks. View an artists data together with their singles, albums, and artists related to them. See a detailed information of each tracks and a preview of it.",
-    image: spotify,
+    ogImage: {
+      dark: OGSpotify,
+      light: OGSpotify,
+    },
     redirect: "spotify",
     techs: [
       {
@@ -311,7 +343,10 @@ export const projects: IProjects[] = [
   {
     name: "Tsismis",
     info: "A real-time chat app with group chat functionalities, real-time notifications, and dark theme.",
-    image: tsismis,
+    ogImage: {
+      dark: DarkOGTsismis,
+      light: LightOGTsismis,
+    },
     redirect: "tsismis",
     techs: [
       {
@@ -339,6 +374,14 @@ export const projects: IProjects[] = [
         Icon: SiExpress,
       },
       {
+        name: "RESTful API",
+        Icon: AiFillApi,
+      },
+      {
+        name: "JWT",
+        Icon: SiJsonwebtokens,
+      },
+      {
         name: "MongoDB",
         Icon: SiMongodb,
       },
@@ -351,7 +394,10 @@ export const projects: IProjects[] = [
   {
     name: "Attendance System - Thesis",
     info: "A web app for viewing a student's attendance record based on their RFID tags. The attendance recording is done through a Raspberry Pi 4B with an RC522 Reader and a HOG algorithm-based Face Recognition functionality for added security. This is my undergraduate Thesis entitled 'Automated Attendance System using RFID, Face Recognition and SMS Capability'. Full details available in the repository.",
-    image: thesis,
+    ogImage: {
+      dark: DarkOGThesis,
+      light: LightOGThesis,
+    },
     redirect: "thesis",
     techs: [
       {
@@ -377,6 +423,14 @@ export const projects: IProjects[] = [
       {
         name: "Express.js",
         Icon: SiExpress,
+      },
+      {
+        name: "RESTful API",
+        Icon: AiFillApi,
+      },
+      {
+        name: "JWT",
+        Icon: SiJsonwebtokens,
       },
       {
         name: "Sequelize ORM",

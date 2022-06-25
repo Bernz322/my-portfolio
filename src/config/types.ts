@@ -7,7 +7,7 @@ export type NavLinksProps = {
 
 export interface INavLinks {
   home: NavLinksProps[];
-  pages?: NavLinksProps[];
+  project: NavLinksProps[];
 }
 
 export interface ISocialLinks {
@@ -24,7 +24,10 @@ export interface ITechs {
 export interface IProjects {
   name: string;
   info: string;
-  image: string;
+  ogImage: {
+    dark: "string";
+    light: "string";
+  };
   redirect: string;
   techs: {
     name: string;

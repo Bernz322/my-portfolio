@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useContext } from "react";
 import { BiLinkExternal } from "react-icons/bi";
 import { FiGithub } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
@@ -9,6 +10,7 @@ import {
   stackAnimateOnView,
 } from "../../config/animations";
 import { IProjects } from "../../config/types";
+import { ThemeModeContext } from "../../context/ThemeContext";
 import { StyledProjectPage, StyledTechStack } from "../../styles";
 
 interface IProps {
@@ -20,6 +22,7 @@ interface IProps {
 
 function SingleProject({ project, count }: IProps) {
   const navigate = useNavigate();
+  const { theme } = useContext(ThemeModeContext);
   // const { scrollYProgress } = useViewportScroll();
   // const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
 
@@ -105,7 +108,9 @@ function SingleProject({ project, count }: IProps) {
             title={project.name}
             loading="lazy"
             className="image"
-            src={project.image}
+            src={
+              theme === "light" ? project.ogImage.light : project.ogImage.dark
+            }
             alt="project-img"
           />
         </div>
