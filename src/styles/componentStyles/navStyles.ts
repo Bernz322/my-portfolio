@@ -3,6 +3,7 @@ import styled from "styled-components/macro";
 
 interface IStyledNav {
   $show: any;
+  open: boolean;
 }
 
 const StyledNav = styled(motion.header)<IStyledNav>`
@@ -13,7 +14,7 @@ const StyledNav = styled(motion.header)<IStyledNav>`
   padding: 0 70px;
   z-index: 9999;
   position: fixed;
-  top: ${(props) => (props.$show ? "0" : "-100px")};
+  top: ${(props) => (props.$show || props.open === true ? "0" : "-100px")};
   left: 0;
   right: 0;
   background-color: ${(props) => props.theme.navbg};
@@ -53,6 +54,7 @@ const StyledNav = styled(motion.header)<IStyledNav>`
       transition: var(--transition2);
       font-size: var(--fz-xs);
       font-weight: 500;
+      cursor: pointer;
       color: ${(props) => props.theme.color2};
       :hover {
         color: ${(props) => props.theme.hover};

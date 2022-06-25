@@ -13,6 +13,7 @@ function Navbar() {
   const { theme } = useContext(ThemeModeContext);
   const [navShow, setNavShow] = useState<boolean>(true);
   const [lastScrollY, setLastScrollY] = useState<number>(0);
+  const [open, setOpen] = useState<boolean>(false);
 
   const navBarController = useCallback(() => {
     if (typeof window !== "undefined") {
@@ -65,7 +66,7 @@ function Navbar() {
   };
 
   return (
-    <StyledNav $show={navShow}>
+    <StyledNav $show={navShow} open={open}>
       <motion.nav variants={navVariants} initial="hidden" animate="visible">
         <motion.div className="nav-left" variants={navLinkVariants}>
           {theme === "light" ? (
@@ -101,7 +102,7 @@ function Navbar() {
           </motion.button>
           <ThemeToggler variants={navLinkVariants} />
         </div>
-        <Menu variants={navLinkVariants} />
+        <Menu variants={navLinkVariants} open={open} setOpen={setOpen} />
       </motion.nav>
     </StyledNav>
   );

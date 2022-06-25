@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import styled from "styled-components/macro";
 import ThemeToggler from "./ThemeToggler";
 import { navLinks } from "../config/data";
@@ -44,8 +44,13 @@ const StyledBurger = styled(motion.div)<{ open: boolean }>`
   }
 `;
 
-function Menu({ variants }: any) {
-  const [open, setOpen] = useState<boolean>(false);
+interface IMenu {
+  variants: any;
+  open: boolean;
+  setOpen: any;
+}
+
+function Menu({ variants, open, setOpen }: IMenu) {
   const openHandler = () => {
     setOpen(!open);
   };

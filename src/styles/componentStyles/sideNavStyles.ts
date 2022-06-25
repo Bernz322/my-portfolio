@@ -16,7 +16,7 @@ const StyledSideNav = styled.div<{ open: boolean }>`
       bottom: 0px;
       right: 0px;
       width: 120vw;
-      height: 100vh;
+      height: calc(100vh + var(--nav-height));
       opacity: 0.7;
       transition: var(--transition2);
       transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
@@ -29,7 +29,7 @@ const StyledSideNav = styled.div<{ open: boolean }>`
     position: fixed;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: calc(100vh + var(--nav-height));
     width: 50%;
     margin: 0;
     background-color: ${(props) => props.theme.menubc};
@@ -66,8 +66,9 @@ const StyledSideNav = styled.div<{ open: boolean }>`
 
     a {
       transition: var(--transition2);
-      font-size: var(--fz-xl);
+      font-size: var(--fz-lg);
       font-weight: 500;
+      cursor: pointer;
       :hover {
         color: ${(props) => props.theme.hover};
       }
