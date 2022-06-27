@@ -392,7 +392,7 @@ export const projects: IProjects[] = [
     },
   },
   {
-    name: "Attendance System - Thesis",
+    name: "Thesis",
     info: "A web app for viewing a student's attendance record based on their RFID tags. The attendance recording is done through a Raspberry Pi 4B with an RC522 Reader and a HOG algorithm-based Face Recognition functionality for added security. This is my undergraduate Thesis entitled 'Automated Attendance System using RFID, Face Recognition and SMS Capability'. Full details available in the repository.",
     ogImage: {
       dark: DarkOGThesis,
