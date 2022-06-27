@@ -26,7 +26,7 @@ const StyledTechStack = styled(motion.ul)`
     margin: 10px;
     border: 1px solid ${(props) => props.theme.btn};
     border-radius: 5px;
-    padding: 5px;
+    padding: 3px;
     cursor: grab;
     &:active {
       cursor: grabbing;
