@@ -83,6 +83,7 @@ import {
   LightReservationVacay,
   DarkReviewVacay,
   LightReviewVacay,
+  ProjectSetup,
 } from "../assets/projects";
 
 export const navLinks: INavLinks = {
@@ -617,6 +618,11 @@ export const projects: IProjects[] = [
         image: { light: LightDashboardThesis, dark: DarkDashboardThesis },
         detail:
           "The dashboard of the wep application which features a table for all user/students and a calendar that will display all of the days that the student is present after they scanned their RFID tags in the school successfully. A demo and journal format manuscript is available just below.",
+      },
+      {
+        image: { light: ProjectSetup, dark: ProjectSetup },
+        detail:
+          "The setup of the entire project wherein the Raspberry Pi and other components is contained in an acrylic enclosure (left) and is operated using computer peripherals such as  monitor, mouse, keyboard (right).",
       },
       // https://youtu.be/MlnJ29t4y5w - Demo
     ],
