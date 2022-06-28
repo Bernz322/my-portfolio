@@ -1,7 +1,6 @@
 import styled from "styled-components/macro";
 
 const StyledProjectPage = styled.div`
-  max-height: auto;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -29,11 +28,9 @@ const StyledProjectPage = styled.div`
     }
   }
 
-  .container {
+  .top-container {
     height: calc(100vh - var(--nav-height));
-    @media only screen and (max-width: 768px) {
-      height: fit-content;
-    }
+    margin-bottom: 60px;
   }
 
   .top {
@@ -97,7 +94,7 @@ const StyledProjectPage = styled.div`
     }
   }
 
-  .bottom {
+  .img-container {
     max-width: var(--site-max-width);
     margin: 0 auto 0;
     z-index: -10;
@@ -108,14 +105,6 @@ const StyledProjectPage = styled.div`
     }
   }
 
-  .project-info {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    max-width: var(--site-max-width);
-    margin: 30px auto;
-    flex-flow: column nowrap;
-  }
   .top-desc {
     display: flex;
     align-items: flex-start;
@@ -149,12 +138,72 @@ const StyledProjectPage = styled.div`
     font-size: clamp(25px, 2vw, 40px);
     color: ${(props) => props.theme.color2};
     text-align: center;
+    margin-bottom: 15px;
   }
 
   .features {
     margin-top: 50px;
     width: 100%;
     text-align: center;
+  }
+  ul.feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    justify-content: center;
+    @media only screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 15px;
+    }
+  }
+
+  .feature {
+    .img-container {
+      margin: 50px auto 0;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+
+  .separator {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+  }
+
+  .separator .line {
+    height: 3px;
+    flex: 1;
+    background-color: ${(props) => props.theme.color1};
+  }
+
+  .separator h3 {
+    padding: 0 2rem;
+  }
+
+  .thesis-additionals {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+
+    .iframe-container {
+      margin-top: 50px;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 `;
 export default StyledProjectPage;

@@ -1,8 +1,10 @@
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
-import { useContext } from "react";
 import { BiLinkExternal } from "react-icons/bi";
 import { FiGithub } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import { Button } from "..";
+import { ThesisManuscript } from "../../assets/projects";
 import {
   fadeUp,
   PopUpFast,
@@ -55,7 +57,7 @@ function SingleProject({ project, count }: IProps) {
   };
   return (
     <StyledProjectPage>
-      <div className="container">
+      <div className="top-container">
         <div className="top">
           <motion.div
             variants={topVariants}
@@ -105,7 +107,7 @@ function SingleProject({ project, count }: IProps) {
           </motion.div>
         </div>
         <motion.div
-          className="bottom"
+          className="img-container"
           variants={bottomVariants}
           initial="hidden"
           animate="visible"
@@ -122,7 +124,7 @@ function SingleProject({ project, count }: IProps) {
           />
         </motion.div>
       </div>
-      <motion.div className="project-info container">
+      <motion.div>
         <div className="top-desc">
           <motion.div
             className="description"
@@ -183,7 +185,68 @@ function SingleProject({ project, count }: IProps) {
           <motion.h3 variants={fadeUp} className="info-head">
             Features
           </motion.h3>
-          <motion.p variants={fadeUp}>Will be added soon.....</motion.p>
+          <ul className="feature-list">
+            {project.features.map((feature) => {
+              return (
+                <motion.li
+                  key={feature.detail}
+                  className="feature"
+                  variants={sectionAnimateOnView}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                >
+                  <motion.div variants={fadeUp} className="img-container">
+                    <img
+                      className="image"
+                      src={
+                        theme === "light"
+                          ? feature.image.light
+                          : feature.image.dark
+                      }
+                      alt="feature"
+                    />
+                  </motion.div>
+                  <motion.p variants={fadeUp}>{feature.detail}</motion.p>
+                </motion.li>
+              );
+            })}
+          </ul>
+          {project.name === "Thesis" && (
+            <>
+              <motion.div className="separator" variants={fadeUp}>
+                <div className="line" />
+                <h3 className="info-head">Read more</h3>
+                <div className="line" />
+              </motion.div>
+              <motion.div
+                variants={sectionAnimateOnView}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="thesis-additionals"
+              >
+                <motion.div variants={fadeUp}>
+                  <Button
+                    buttonText="Manuscript"
+                    buttonUrl={ThesisManuscript}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Thesis Manuscript in Journal Format"
+                  />
+                </motion.div>
+                <motion.div className="iframe-container" variants={fadeUp}>
+                  <iframe
+                    src="https://www.youtube.com/embed/MlnJ29t4y5w"
+                    title="Thesis Demo"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </motion.div>
+              </motion.div>
+            </>
+          )}
         </motion.div>
       </motion.div>
     </StyledProjectPage>
