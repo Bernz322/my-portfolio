@@ -8,18 +8,18 @@ import {
   // Cursor,
   Footer,
   Hero,
-  JBShort,
   Navbar,
   Page404,
   Preloader,
   Project,
   SideElement,
-  Spotify,
-  Thesis,
-  Tsismis,
-  Vacay,
 } from "./components";
 import { ThemeModeProvider } from "./context/ThemeContext";
+import Vacay from "./components/pages/Vacay";
+import JBShort from "./components/pages/JBShort";
+import Spotify from "./components/pages/Spotify";
+import Tsismis from "./components/pages/Tsismis";
+import Thesis from "./components/pages/Thesis";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
