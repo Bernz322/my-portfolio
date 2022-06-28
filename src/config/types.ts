@@ -25,8 +25,8 @@ export interface IProjects {
   name: string;
   info: string;
   ogImage: {
-    dark: "string";
-    light: "string";
+    dark: string;
+    light: string;
   };
   redirect: string;
   techs: {
@@ -37,4 +37,8 @@ export interface IProjects {
     github: string;
     demo: string;
   };
+  features: {
+    image: { light: string; dark: string };
+    detail: string;
+  }[];
 }

@@ -45,8 +45,46 @@ import {
   LightOGTsismis,
   LightOGThesis,
   DarkOGThesis,
+  LightAboutVacay,
+  DarkAboutVacay,
+  LightShortenJB,
+  DarkShortenJB,
+  ProfileSpotify,
+  DarkChatBoxTsismis,
+  LightChatBoxTsismis,
+  DarkDashboardThesis,
+  LightDashboardThesis,
+  DarkLoaderJB,
+  LightLoaderJB,
+  Light404JB,
+  Dark404JB,
+  AlbumSpotify,
+  ArtistSpotify,
+  PlaylistSpotify,
+  TrackSpotify,
+  UserPlaylistSpotify,
+  UserTopArtistSpotify,
+  UserTopTracksSpotify,
+  DarkGCTsismis,
+  LightGCTsismis,
+  DarkFindRoomVacay,
+  LightFindRoomVacay,
+  LightHostRoomVacay,
+  DarkHostRoomVacay,
+  DarkDashboardVacay,
+  LightDashboardVacay,
+  DarkListingInfoVacay,
+  LightListingInfoVacay,
+  DarkMainPageVacay,
+  LightMainPageVacay,
+  DarkProfileVacay,
+  LightProfileVacay,
+  DarkReservationVacay,
+  LightReservationVacay,
+  DarkReviewVacay,
+  LightReviewVacay,
 } from "../assets/projects";
-// import mantine from "../assets/logo/mantine.svg";
+
 export const navLinks: INavLinks = {
   home: [
     {
@@ -209,7 +247,7 @@ export const techs: ITechs[] = [
 export const projects: IProjects[] = [
   {
     name: "Vacay",
-    info: "A web app for hosting rooms within CARAGA Region for free. Comes with map pinning support, listing dashboard, reservations, and many more.",
+    info: "A web app for hosting rooms within CARAGA Region for free which comes with map pinning support, listing dashboard, reservations, and many more.",
     ogImage: {
       dark: DarkOGVacay,
       light: LightOGVacay,
@@ -261,6 +299,53 @@ export const projects: IProjects[] = [
       github: "https://github.com/Bernz322/vacay-app",
       demo: "https://vacaycaraga.netlify.app/",
     },
+    features: [
+      {
+        image: { light: LightAboutVacay, dark: DarkAboutVacay },
+        detail:
+          "An about us page with FAQ's and a contact section for recommendations and reporting of bugs.",
+      },
+      {
+        image: { light: LightFindRoomVacay, dark: DarkFindRoomVacay },
+        detail:
+          "A page to all available listings with province filter, price sorting, and pagination.",
+      },
+      {
+        image: { light: LightHostRoomVacay, dark: DarkHostRoomVacay },
+        detail:
+          "A page for creating listings and becoming a host for free with map pinning support and image upload.",
+      },
+      {
+        image: { light: LightDashboardVacay, dark: DarkDashboardVacay },
+        detail:
+          "A dedicated page for every created listing to manage them individually like accepting or declining reservations and update guest status. A listing can be taken out of the all available rooms if they are set to offline and can be deleted.",
+      },
+      {
+        image: { light: LightListingInfoVacay, dark: DarkListingInfoVacay },
+        detail:
+          "All information of a single listing is readily accessible and can be viewed by anyone as long as it is put online by the owner. A room availability checker is added to ensure that it can only be reserved if no one uses the room in the date range inputted by the user. All reviews can also be viewed at the bottom of it and the full information of the owner.",
+      },
+      {
+        image: { light: LightMainPageVacay, dark: DarkMainPageVacay },
+        detail:
+          "The landing page of the web application which features two (2) sections. The first one contains the hero section and the second one shows a couple of available listings.",
+      },
+      {
+        image: { light: LightProfileVacay, dark: DarkProfileVacay },
+        detail:
+          "A user's profile page can also be accessed which displays all their information and their created listings if they have one.",
+      },
+      {
+        image: { light: LightReservationVacay, dark: DarkReservationVacay },
+        detail:
+          "A user can also view all of their created reservations that showcase minimal information to it.",
+      },
+      {
+        image: { light: LightReviewVacay, dark: DarkReviewVacay },
+        detail:
+          "All information of a single reservation can be viewed by the user and its current status. This is also where listing reviews are given which is only available if the reservation is accepted by the listing owner.",
+      },
+    ],
   },
   {
     name: "JBShort",
@@ -304,6 +389,23 @@ export const projects: IProjects[] = [
       github: "https://github.com/Bernz322/jbshort",
       demo: "https://www.jbshort.xyz/",
     },
+    features: [
+      {
+        image: { light: LightShortenJB, dark: DarkShortenJB },
+        detail:
+          "Enter a long URL and a short URL will be given below it. It has a copy to clipboard function when the button is clicked, and the short URL can be customized based on the user's preferences. However, if a similar long URL is shortened, it will just recycle its first shortened URL.",
+      },
+      {
+        image: { light: LightLoaderJB, dark: DarkLoaderJB },
+        detail:
+          "When a shortened URL is used, a loader page is first displayed before they are redirected to its long URL.",
+      },
+      {
+        image: { light: Light404JB, dark: Dark404JB },
+        detail:
+          "When a non-existing or invalid short URL is used, a page 404 will be displayed.",
+      },
+    ],
   },
   {
     name: "Spotify Viewer",
@@ -339,6 +441,47 @@ export const projects: IProjects[] = [
       github: "https://github.com/Bernz322/spotify-api-profile-app",
       demo: "https://spotify-api-profile-app.herokuapp.com/",
     },
+    features: [
+      {
+        image: { light: ProfileSpotify, dark: ProfileSpotify },
+        detail:
+          "Lets the logged in user view their spotify's personal information such as followers count, profile image, top artists and tracks of the month, and playlists.",
+      },
+      {
+        image: { light: UserPlaylistSpotify, dark: UserPlaylistSpotify },
+        detail:
+          "A dedicated page to see all available playlists of the current logged in user.",
+      },
+      {
+        image: { light: UserTopArtistSpotify, dark: UserTopArtistSpotify },
+        detail:
+          "Display the top 20 artists of the current user in three (3) different time frames; month, six (6) months, and all time.",
+      },
+      {
+        image: { light: UserTopTracksSpotify, dark: UserTopTracksSpotify },
+        detail:
+          "Display the top 20 tracks of the current user in three (3) different time frames; month, six (6) months, and all time.",
+      },
+      {
+        image: { light: AlbumSpotify, dark: AlbumSpotify },
+        detail:
+          "Display all information of an artist's album or singles such as it's popularity, the number count and all songs in the album, and copyright.",
+      },
+      {
+        image: { light: ArtistSpotify, dark: ArtistSpotify },
+        detail:
+          "Display all information of an artist such as their popularity, followers count, all their albums and singles and a section of all artists related to them.",
+      },
+      {
+        image: { light: PlaylistSpotify, dark: PlaylistSpotify },
+        detail: "Display all songs in a playlist and its folowers count.",
+      },
+      {
+        image: { light: TrackSpotify, dark: TrackSpotify },
+        detail:
+          "Display all available information of a track such as the album it belongs to, when it was released, the track's title, artist, duration and a 30-sec preview of it. Additionally, other tracks details such as its acousticness, time signature, temp, etc. is shown.",
+      },
+    ],
   },
   {
     name: "Tsismis",
@@ -390,6 +533,18 @@ export const projects: IProjects[] = [
       github: "https://github.com/Bernz322/tsismis",
       demo: "https://www.tsismis.xyz/",
     },
+    features: [
+      {
+        image: { light: LightChatBoxTsismis, dark: DarkChatBoxTsismis },
+        detail:
+          "The navigation bar contains three items, for switching themes, real-time notifications indicator, and a logout dropdown button. In the main section, the left container contains all available chats, a search field to find users, and a '+' indicator for the creation of a new group chat. The right container contains all information of the current selected chat such as its name, all members present, and a leave button. Lastly, the center container contains the chat box of the current chat.",
+      },
+      {
+        image: { light: LightGCTsismis, dark: DarkGCTsismis },
+        detail:
+          "The group chat can be updated when the gear indicator is pressed in the group info container. Any participants can rename the group chat but the adding and removing of participants is limited to the admin. If an admin leaves, a new randomized individual is selected as the new admin. If all participants leave the group chat, it will automatically be deleted.",
+      },
+    ],
   },
   {
     name: "Thesis",
@@ -457,5 +612,13 @@ export const projects: IProjects[] = [
       github: "https://github.com/Bernz322/snnhs-attendance-system",
       demo: "https://snnhs-attendance.netlify.app/",
     },
+    features: [
+      {
+        image: { light: LightDashboardThesis, dark: DarkDashboardThesis },
+        detail:
+          "The dashboard of the wep application which features a table for all user/students and a calendar that will display all of the days that the student is present after they scanned their RFID tags in the school successfully. A demo and journal format manuscript is available just below.",
+      },
+      // https://youtu.be/MlnJ29t4y5w - Demo
+    ],
   },
 ];
