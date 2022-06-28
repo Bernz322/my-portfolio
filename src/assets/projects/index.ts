@@ -22,6 +22,8 @@ export { default as LightOGThesis } from "./thesis/login-light.png";
 export { default as DarkOGThesis } from "./thesis/login-dark.png";
 export { default as LightDashboardThesis } from "./thesis/attendance-dashboard-light.png";
 export { default as DarkDashboardThesis } from "./thesis/attendance-dashboard-dark.png";
+export { default as ProjectSetup } from "./thesis/project-setup.jpg";
+export { default as ThesisManuscript } from "./thesis/manuscript.pdf";
 // Tsismis
 export { default as LightOGTsismis } from "./tsismis/og-light.png";
 export { default as DarkOGTsismis } from "./tsismis/og-dark.png";
