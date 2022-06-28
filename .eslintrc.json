@@ -35,6 +35,8 @@
         "jsx-a11y/click-events-have-key-events": "off",
         "import/no-cycle": [2, { "maxDepth": 2 }],
         "import/order": 2,
+        "react/prop-types": "off",
+        "react/require-default-props": "off",
         "no-noninteractive-element-to-interactive-role": [
             "off",
             {
