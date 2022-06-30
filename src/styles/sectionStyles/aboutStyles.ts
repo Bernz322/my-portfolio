@@ -44,6 +44,16 @@ const StyledAbout = styled(motion.section)`
     margin-bottom: 15px;
   }
 
+  a.steam-anchor {
+    color: ${(props) => props.theme.color4};
+    font-size: var(--fz-lg);
+    font-family: var(--font-sans);
+    transition: var(--transition2);
+    @media only screen and (max-width: 768px) {
+      font-size: var(--fz-sm);
+    }
+  }
+
   p.desc,
   .tech-desc {
     font-size: var(--fz-lg);

@@ -13,19 +13,14 @@ import {
 function About() {
   const one = {
     id: 0,
-    data: "I am a self-taught developer and a graduate of Bachelor of Science in Computer Engineering. I started coding in 2020 using Java and had much fun doing Swing Projects. I decided to jump to web development in the middle of the same year and picked Javascript as my main language to build applications in the internet.",
+    data: "I am a self-taught developer and a graduate of Bachelor of Science in Computer Engineering with RA 7687 DOST Scholarship. I started coding in 2020 with Java and had much fun doing Swing Projects. I then decided to jump to web development in the middle of the same year and picked up Javascript as my main language.",
   };
 
   const two = {
     id: 1,
-    data: "Along my learning journey, I acquired several technologies which helped me scale my applications and develop my Undergraduate Thesis.",
+    data: "My main focus these days is enhancing my Data Structures and Algorithm to become a better developer.",
   };
-
-  const three = {
-    id: 2,
-    data: "My main focus these days is enhancing my Data Structures and Algorithm knowledge and add it on my current arsenal.",
-  };
-  const descriptions = [one, two, three];
+  const descriptions = [one, two];
 
   return (
     <StyledAbout
@@ -76,6 +71,19 @@ function About() {
               {desc.data}
             </motion.p>
           ))}
+          <p className="desc">
+            I also enjoy playing video games in my free time and would love to
+            play with anyone. Here is my{" "}
+            <a
+              href="https://steamcommunity.com/id/celestial6000/"
+              target="_blank"
+              rel="noreferrer"
+              className="steam-anchor"
+            >
+              Steam
+            </a>{" "}
+            account.
+          </p>
         </motion.div>
       </motion.div>
       <motion.div
