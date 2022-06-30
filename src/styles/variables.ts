@@ -2,33 +2,13 @@ import { css } from "styled-components/macro";
 
 const variables = css`
   :root {
-    /* Unused colors */
-    --azure: #8080ff;
-    --yale: #0e4d92;
-    --space: #1d2951;
-    --navy: #000080;
-    --royal: #101d6b;
-    --cyan: #0affff;
-    --steel: #4683b7;
-    --cobalt: #0147ab;
-    --sapphire: #0d52bd;
-    --carolina: #57a0d3;
-    --egyptian: #1035ac;
     --prussian: #003152;
-    --olympic: #008ecc;
-    --baby: #87cdee;
-    --sky: #95cadb;
-
-    /* Main colors */
     --slate: #abb9c4;
     --light-slate: #d2d7dc;
-    --lightest-slate: #e3ebec; /* Light Mode Body */
-    --air-force: #588bae; /* Light Mode Font */
-    --teal: #008081;
-    --turqoise: #42e0d1;
-    --tiffany: #81d8d0; /* Dark Mode Font */
+    --lightest-slate: #e3ebec;
+    --air-force: #588bae;
     --electric: #79f6fc;
-    --dark-navy: #001429; /* Dark Mode Body */
+    --dark-navy: #001429;
 
     --default-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.8);
 
