@@ -1,46 +1,74 @@
-# Getting Started with Create React App
+<div align="center">
+  <img alt="Logo" src="https://raw.githubusercontent.com/Bernz322/my-portfolio/main/src/assets/logo/logo.png" width="100" />
+</div>
+<h1 align="center"><a href='https://jeffreybernadas.tech' target='_blank' rel='noreferrer'>jeffreybernadas.tech</a></h1>
+<p align="center">
+ My website portfolio with design inspiration from <a href="https://brittanychiang.com" target="_blank" rel='noreferrer'>brittanychiang.com</a>. Hosted in <a href="https://www.netlify.com/" target="_blank" rel='noreferrer'>Netlify</a> with custom <a href="https://get.tech/" target="_blank">.TECH</a> domain from <a href="https://education.github.com/pack" target="_blank" rel='noreferrer'>Github Student Pack</a>. 
+</p>
+<p align="center">
+  <a href="https://app.netlify.com/sites/jeffreybernadas/deploys" target="_blank" rel='noreferrer'>
+    <img src="https://api.netlify.com/api/v1/badges/dcdb76d7-daa4-4f56-b5f8-897f742a8923/deploy-status" alt="Netlify Status" />
+  </a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ⚒️ Built with the following technologies:
 
-## Available Scripts
+<ul>
+    <li>React.js</li>
+    <li>Typescript</li>
+    <li>Styled Components</li>
+    <li>Framer</li>
+    <li>ESLint + Airbnb</li>
+</ul>
 
-In the project directory, you can run:
+## 🎨 Palette
 
-### `npm start`
+| Color          | Hex                                                                |
+| -------------- | ------------------------------------------------------------------ |
+| Prussian       | ![#003152](https://via.placeholder.com/10/003152?text=+) `#003152` |
+| Slate          | ![#abb9c4](https://via.placeholder.com/10/abb9c4?text=+) `#abb9c4` |
+| Light Slate    | ![#d2d7dc](https://via.placeholder.com/10/d2d7dc?text=+) `#d2d7dc` |
+| Lightest Slate | ![#e3ebec](https://via.placeholder.com/10/e3ebec?text=+) `#e3ebec` |
+| Electric       | ![#588bae](https://via.placeholder.com/10/588bae?text=+) `#a8b2d1` |
+| 588bae Force   | ![#79f6fc](https://via.placeholder.com/10/79f6fc?text=+) `#79f6fc` |
+| Dark Navy      | ![#001429](https://via.placeholder.com/10/001429?text=+) `#001429` |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🖼️ Preview
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Main Page - Light Mode
 
-### `npm test`
+![main-light](https://raw.githubusercontent.com/Bernz322/my-portfolio/main/src/assets/readme/light-main.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Main Page - Dark Mode
 
-### `npm run build`
+![main-dark](https://raw.githubusercontent.com/Bernz322/my-portfolio/main/src/assets/readme/dark-main.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Project Page - Light Mode
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![project-light](https://raw.githubusercontent.com/Bernz322/my-portfolio/main/src/assets/readme/light-project.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Project Page - Dark Mode
 
-### `npm run eject`
+![project-dark](https://raw.githubusercontent.com/Bernz322/my-portfolio/main/src/assets/readme/dark-project.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 💻 Installation & Deployment
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Install dependencies
+   <br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   `npm install`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. Start server
+   <br>
 
-## Learn More
+   `npm start`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Make changes and Host the codebase in a [Repository](https://github.com/)
+   <br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   `git remote & git push origin *branch*`
+
+4. Deploy repository using [Netlify](https://www.netlify.com/) with the Build command:
+   <br>
+
+   `CI= npm run build`
