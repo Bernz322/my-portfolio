@@ -18,7 +18,6 @@ export const useDarkMode = () => {
     } else {
       setMode("light");
     }
-    // theme === "light" ? setMode("dark") : setMode("light");
   };
 
   //   For checking the theme every rerender
@@ -31,7 +30,6 @@ export const useDarkMode = () => {
     } else {
       setTheme("light");
     }
-    // currentTheme ? setTheme(theme) : setTheme("light");
   }, []);
 
   return [theme, themeToggler];
