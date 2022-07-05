@@ -71,7 +71,7 @@ function About() {
               {desc.data}
             </motion.p>
           ))}
-          <p className="desc">
+          <motion.p className="desc" variants={fadeUp}>
             I also enjoy playing video games in my free time and would love to
             play with anyone. Here is my{" "}
             <a
@@ -83,7 +83,7 @@ function About() {
               Steam
             </a>{" "}
             account.
-          </p>
+          </motion.p>
         </motion.div>
       </motion.div>
       <motion.div

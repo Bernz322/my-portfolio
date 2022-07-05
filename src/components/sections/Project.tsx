@@ -43,6 +43,9 @@ function Project() {
         {projects.map((project) => (
           <motion.li
             variants={projectsIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
             className="project"
             key={project.name}
           >
