@@ -58,7 +58,7 @@ function Project() {
                     : project.ogImage.dark
                 }
                 alt="project-img"
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.05 }}
                 transition={transition}
               />
             </Link>
