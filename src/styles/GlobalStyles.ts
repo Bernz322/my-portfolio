@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle<ThemeProps>`
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        /* cursor: none; */
+        cursor: none !important;
     }
     
     html{
@@ -55,6 +55,7 @@ const GlobalStyles = createGlobalStyle<ThemeProps>`
         text-decoration:none;
         color:${(props) => props.theme.color1};
         font-family: var(--font-mono);
+        cursor: default;
     }
 
     li{

@@ -11,6 +11,7 @@ export const lightTheme: any = {
   themeIcons: "#001429",
   menubc: "#d2d7dc",
   menuBackdrop: "#abb9c4",
+  cursor: "#fff",
 };
 export const darkTheme: any = {
   body: "#001429",
@@ -25,6 +26,7 @@ export const darkTheme: any = {
   themeIcons: "#fccf3e",
   menubc: "#1d2951",
   menuBackdrop: "#003152",
+  cursor: "#79f6fc",
 };
 
 export type ThemeProps = {

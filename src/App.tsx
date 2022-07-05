@@ -5,7 +5,7 @@ import { GlobalStyles, StyledMain } from "./styles";
 import {
   About,
   Contact,
-  // Cursor,
+  Cursor,
   Footer,
   Hero,
   Navbar,
@@ -42,7 +42,7 @@ function App() {
   return (
     <ThemeModeProvider>
       <GlobalStyles />
-      {/* <Cursor /> */}
+      <Cursor />
       <AnimatePresence>
         {!isLoaded && (
           <motion.div

@@ -1,18 +1,42 @@
 import styled from "styled-components/macro";
 
 const StyledCursor = styled.div`
-  z-index: 10000;
-  border-radius: var(--border-radius-circle);
-  width: 32px;
-  height: 32px;
-  border: 1px solid ${(props) => props.theme.color4};
-  overflow: hidden;
-  position: fixed;
-  pointer-events: none;
-  transform: translate3d(0, -100, 0);
+  .main-cursor,
+  .secondary-cursor {
+    z-index: 10000;
+
+    pointer-events: none;
+
+    position: fixed;
+  }
+
+  .main-cursor {
+    transition: opacity 1s cubic-bezier(0.77, 0, 0.175, 1);
+    animation: fadeIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+    mix-blend-mode: difference;
+    transform: translate3d(0, 0, 0);
+
+    .main-cursor-background {
+      width: 15px;
+      height: 15px;
+      background: ${(props) => props.theme.cursor};
+      border-radius: 50%;
+    }
+  }
 
   .secondary-cursor {
-    color: red;
+    width: 30px;
+    height: 30px;
+    mix-blend-mode: difference;
+    transform: translate3d(0, 0, 0);
+
+    .cursor-background {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 2px solid ${(props) => props.theme.cursor};
+      position: relative;
+    }
   }
 `;
 export default StyledCursor;
