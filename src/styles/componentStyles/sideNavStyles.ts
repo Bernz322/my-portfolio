@@ -49,6 +49,7 @@ const StyledSideNav = styled.div<{ open: boolean }>`
       justify-content: center;
       flex-flow: column nowrap;
       height: 100%;
+      padding-bottom: var(--nav-height);
     }
   }
 
