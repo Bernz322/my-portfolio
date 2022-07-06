@@ -1,6 +1,9 @@
 import styled from "styled-components/macro";
 
 const StyledCursor = styled.div`
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
   .main-cursor,
   .secondary-cursor {
     z-index: 10000;

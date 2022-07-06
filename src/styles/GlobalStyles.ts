@@ -12,6 +12,9 @@ const GlobalStyles = createGlobalStyle<ThemeProps>`
         margin: 0;
         padding: 0;
         cursor: none !important;
+        @media only screen and (max-width: 768px) {
+            cursor: initial !important;
+        }
     }
     
     html{
