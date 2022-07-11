@@ -52,3 +52,5 @@ export { default as LightReservationVacay } from "./vacay/user-reservations-ligh
 export { default as DarkReservationVacay } from "./vacay/user-reservations-dark.png";
 export { default as LightReviewVacay } from "./vacay/user-reserved-room-review-light.png";
 export { default as DarkReviewVacay } from "./vacay/user-reserved-room-review-dark.png";
+// Others
+export { default as Others } from "./others/jb-others.png";

@@ -33,6 +33,7 @@ import {
   SiGooglecalendar,
   SiMega,
   SiJsonwebtokens,
+  SiTailwindcss,
 } from "react-icons/si";
 import { INavLinks, IProjects, ISocialLinks, ITechs } from "./types";
 import {
@@ -84,6 +85,7 @@ import {
   DarkReviewVacay,
   LightReviewVacay,
   ProjectSetup,
+  Others,
 } from "../assets/projects";
 
 export const navLinks: INavLinks = {
@@ -624,7 +626,40 @@ export const projects: IProjects[] = [
         detail:
           "The setup of the entire project wherein the Raspberry Pi and other components is contained in an acrylic enclosure (left) and is operated using computer peripherals such as  monitor, mouse, keyboard (right).",
       },
-      // https://youtu.be/MlnJ29t4y5w - Demo
+    ],
+  },
+  {
+    name: "Others",
+    info: "A compilation of all my other projects I have done when I first started my coding journey, and as a Computer Engineering student.",
+    ogImage: {
+      dark: Others,
+      light: Others,
+    },
+    redirect: "others",
+    techs: [
+      {
+        name: "React.js",
+        Icon: SiReact,
+      },
+      {
+        name: "TailwindCSS",
+        Icon: SiTailwindcss,
+      },
+      {
+        name: "Typescript",
+        Icon: SiTypescript,
+      },
+    ],
+    urls: {
+      github: "https://github.com/Bernz322/other-projects",
+      demo: "https://jb-others.netlify.app/",
+    },
+    features: [
+      {
+        image: { light: Others, dark: Others },
+        detail:
+          "There is really nothing awesome on this website aside from the projects it features 😊.",
+      },
     ],
   },
 ];
