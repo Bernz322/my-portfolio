@@ -35,19 +35,19 @@
 
 ## 🖼️ Preview
 
-### Main Page - Light Mode
+<h3 align='center'>Main Page - Light Mode</h3>
 
 ![main-light](https://raw.githubusercontent.com/Bernz322/my-portfolio/main/src/assets/readme/light-main.png)
 
-### Main Page - Dark Mode
+<h3 align='center'>Main Page - Dark Mode</h3>
 
 ![main-dark](https://raw.githubusercontent.com/Bernz322/my-portfolio/main/src/assets/readme/dark-main.png)
 
-### Project Page - Light Mode
+<h3 align='center'>Project's Page - Light Mode</h3>
 
 ![project-light](https://raw.githubusercontent.com/Bernz322/my-portfolio/main/src/assets/readme/light-project.png)
 
-### Project Page - Dark Mode
+<h3 align='center'>Project's Page - Dark Mode</h3>
 
 ![project-dark](https://raw.githubusercontent.com/Bernz322/my-portfolio/main/src/assets/readme/dark-project.png)
 
