@@ -183,11 +183,11 @@ export const techs: ITechs[] = [
   //   name: "Material UI",
   //   Icon: SiMaterialui,
   // },
-  {
-    id: "framer-motion",
-    name: "Framer Motion",
-    Icon: SiFramer,
-  },
+  // {
+  //   id: "framer-motion",
+  //   name: "Framer Motion",
+  //   Icon: SiFramer,
+  // },
   {
     id: "node",
     name: "Node.js",
@@ -204,14 +204,14 @@ export const techs: ITechs[] = [
     Icon: SiMongodb,
   },
   {
-    id: "sequelize",
-    name: "Sequelize ORM",
-    Icon: SiSequelize,
-  },
-  {
     id: "mysql",
     name: "MySQL",
     Icon: SiMysql,
+  },
+  {
+    id: "sequelize",
+    name: "Sequelize ORM",
+    Icon: SiSequelize,
   },
   {
     id: "restapi",
