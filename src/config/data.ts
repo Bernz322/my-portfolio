@@ -5,8 +5,7 @@ import {
   FiFacebook,
   FiInstagram,
 } from "react-icons/fi";
-import { AiFillApi, AiOutlineHtml5 } from "react-icons/ai";
-import { IoLogoSass } from "react-icons/io";
+import { AiFillApi } from "react-icons/ai";
 import {
   SiTypescript,
   SiReact,
@@ -19,7 +18,6 @@ import {
   SiArduino,
   SiRaspberrypi,
   SiJava,
-  SiGithub,
   SiGit,
   SiMaterialui,
   SiPython,
@@ -135,16 +133,16 @@ export const socialLinks: ISocialLinks[] = [
 ];
 
 export const techs: ITechs[] = [
-  {
-    id: "html5",
-    name: "HTML",
-    Icon: AiOutlineHtml5,
-  },
-  {
-    id: "sass",
-    name: "Sass",
-    Icon: IoLogoSass,
-  },
+  // {
+  //   id: "html5",
+  //   name: "HTML",
+  //   Icon: AiOutlineHtml5,
+  // },
+  // {
+  //   id: "sass",
+  //   name: "Sass",
+  //   Icon: IoLogoSass,
+  // },
   {
     id: "javascript",
     name: "Javascript",
@@ -160,11 +158,11 @@ export const techs: ITechs[] = [
     name: "Java",
     Icon: SiJava,
   },
-  {
-    id: "python",
-    name: "Python",
-    Icon: SiPython,
-  },
+  // {
+  //   id: "python",
+  //   name: "Python",
+  //   Icon: SiPython,
+  // },
   {
     id: "react",
     name: "React.js",
@@ -180,11 +178,11 @@ export const techs: ITechs[] = [
     name: "Styled-Components",
     Icon: SiStyledcomponents,
   },
-  {
-    id: "materialui",
-    name: "Material UI",
-    Icon: SiMaterialui,
-  },
+  // {
+  //   id: "materialui",
+  //   name: "Material UI",
+  //   Icon: SiMaterialui,
+  // },
   {
     id: "framer-motion",
     name: "Framer Motion",
@@ -220,16 +218,16 @@ export const techs: ITechs[] = [
     name: "RESTful API",
     Icon: AiFillApi,
   },
-  {
-    id: "jsonwebtoken",
-    name: "JWT",
-    Icon: SiJsonwebtokens,
-  },
-  {
-    id: "github",
-    name: "Github",
-    Icon: SiGithub,
-  },
+  // {
+  //   id: "jsonwebtoken",
+  //   name: "JWT",
+  //   Icon: SiJsonwebtokens,
+  // },
+  // {
+  //   id: "github",
+  //   name: "Github",
+  //   Icon: SiGithub,
+  // },
   {
     id: "git",
     name: "Git",
