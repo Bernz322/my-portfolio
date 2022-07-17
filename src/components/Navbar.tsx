@@ -3,6 +3,7 @@ import { motion, Variants } from "framer-motion";
 import { StyledNav } from "../styles";
 import logo from "../assets/logo/logo.png";
 import logo1 from "../assets/logo/logo1.png";
+import resume from "../assets/resume/jeffrey-a4.pdf";
 import { navLinks } from "../config/data";
 import { NavLinksProps } from "../config/types";
 import Menu from "./Menu";
@@ -97,9 +98,16 @@ function Navbar() {
               </motion.li>
             ))}
           </ul>
-          <motion.button variants={navLinkVariants} className="resume-btn">
+          <motion.a
+            variants={navLinkVariants}
+            href={resume}
+            className="resume-btn"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Jeffrey Bernadas' Resume"
+          >
             Resume
-          </motion.button>
+          </motion.a>
           <ThemeToggler variants={navLinkVariants} />
         </div>
         <Menu variants={navLinkVariants} open={open} setOpen={setOpen} />

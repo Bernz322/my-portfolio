@@ -5,6 +5,7 @@ import ThemeToggler from "./ThemeToggler";
 import { navLinks } from "../config/data";
 import { NavLinksProps } from "../config/types";
 import { StyledSideNav } from "../styles";
+import resume from "../assets/resume/jeffrey-a4.pdf";
 
 const StyledBurger = styled(motion.div)<{ open: boolean }>`
   display: none;
@@ -86,9 +87,15 @@ function Menu({ variants, open, setOpen }: IMenu) {
                 </li>
               ))}
             </ul>
-            <button type="button" className="resume-btn">
+            <a
+              href={resume}
+              className="resume-btn"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Jeffrey Bernadas' Resume"
+            >
               Resume
-            </button>
+            </a>
             <ThemeToggler />
           </nav>
         </aside>
