@@ -29,8 +29,8 @@
 | Slate          | ![#abb9c4](https://via.placeholder.com/10/abb9c4?text=+) `#abb9c4` |
 | Light Slate    | ![#d2d7dc](https://via.placeholder.com/10/d2d7dc?text=+) `#d2d7dc` |
 | Lightest Slate | ![#e3ebec](https://via.placeholder.com/10/e3ebec?text=+) `#e3ebec` |
-| Electric       | ![#588bae](https://via.placeholder.com/10/588bae?text=+) `#a8b2d1` |
-| 588bae Force   | ![#79f6fc](https://via.placeholder.com/10/79f6fc?text=+) `#79f6fc` |
+| Electric       | ![#79f6fc](https://via.placeholder.com/10/79f6fc?text=+) `#79f6fc` |
+| Air Force      | ![#588bae](https://via.placeholder.com/10/588bae?text=+) `#588bae` |
 | Dark Navy      | ![#001429](https://via.placeholder.com/10/001429?text=+) `#001429` |
 
 ## 🖼️ Preview
