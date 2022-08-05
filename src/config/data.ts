@@ -5,7 +5,7 @@ import {
   FiFacebook,
   FiInstagram,
 } from "react-icons/fi";
-import { AiFillApi } from "react-icons/ai";
+import { AiFillApi, AiOutlineGoogle } from "react-icons/ai";
 import {
   SiTypescript,
   SiReact,
@@ -248,7 +248,7 @@ export const techs: ITechs[] = [
 export const projects: IProjects[] = [
   {
     name: "Vacay",
-    info: "A web app for hosting rooms within CARAGA Region for free which comes with map pinning support, listing dashboard, reservations, and many more.",
+    info: "A web app for hosting rooms within CARAGA Region for free which comes with map pinning support, listing dashboard, reservations, Google and Github OAuth, and many more.",
     ogImage: {
       dark: DarkOGVacay,
       light: LightOGVacay,
@@ -270,6 +270,14 @@ export const projects: IProjects[] = [
       {
         name: "Mapbox",
         Icon: SiMapbox,
+      },
+      {
+        name: "GoogleOAuth",
+        Icon: AiOutlineGoogle,
+      },
+      {
+        name: "GithubOAuth",
+        Icon: FiGithub,
       },
       {
         name: "Node.js",
