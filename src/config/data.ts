@@ -625,7 +625,7 @@ export const projects: IProjects[] = [
       {
         image: { light: LightDashboardThesis, dark: DarkDashboardThesis },
         detail:
-          "The dashboard of the wep application which features a table for all user/students and a calendar that will display all of the days that the student is present after they scanned their RFID tags in the school successfully. A demo and journal format manuscript is available just below.",
+          "The dashboard of the web application which features a table for all user/students and a calendar that will display all of the days that the student is present after they scanned their RFID tags in the school successfully. A demo and journal format manuscript is available just below.",
       },
       {
         image: { light: ProjectSetup, dark: ProjectSetup },
