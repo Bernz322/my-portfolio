@@ -17,8 +17,9 @@ function Contact() {
     id: 1,
     data: (
       <p>
-        I’m currently looking and is open for any opportunities. Send me a
-        message and let&apos;s talk!
+        Although I’m not currently looking for any new opportunities, my inbox
+        is always open. Whether you have a question or just want to say hi, I’ll
+        try my best to get back to you!
       </p>
     ),
   };
