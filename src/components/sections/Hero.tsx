@@ -14,9 +14,9 @@ function Hero() {
     id: 3,
     data: (
       <p>
-        I‘m an aspiring Software Engineer based in the Philippines. I can do
-        full-stack web applications and love building stuffs in the internet
-        from scratch.
+        I‘m a Full Stack Developer based in the Philippines. I can do web
+        applications from start to finish and love building stuffs in the
+        internet from scratch.
       </p>
     ),
   };
