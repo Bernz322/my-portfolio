@@ -4,7 +4,7 @@ const StyledProjectPage = styled.div`
   display: flex;
   align-content: center;
   justify-content: center;
-  flex-flow: column nowrap;
+  flex-flow: nowrap column;
   margin: var(--nav-height) auto;
   max-width: var(--site-max-width);
   padding: 0 150px;
@@ -29,7 +29,7 @@ const StyledProjectPage = styled.div`
   }
 
   .top-container {
-    height: calc(100vh - var(--nav-height));
+    min-height: calc(100vh - var(--nav-height));
     margin-bottom: 60px;
   }
 
@@ -98,13 +98,16 @@ const StyledProjectPage = styled.div`
     max-width: var(--site-max-width);
     margin: 0 auto 0;
     z-index: -10;
+    height: fit-content;
     .image {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
-
+  .hidden {
+    margin: 25px;
+  }
   .top-desc {
     display: flex;
     align-items: flex-start;
