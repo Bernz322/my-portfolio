@@ -32,7 +32,12 @@ import {
   SiMega,
   SiJsonwebtokens,
   SiTailwindcss,
+  SiWebpack,
+  SiJest,
+  SiSonarqube,
+  SiNginx,
 } from "react-icons/si";
+import { TbCurlyLoop } from "react-icons/tb";
 import { INavLinks, IProjects, ISocialLinks, ITechs } from "./types";
 import {
   DarkOGVacay,
@@ -133,16 +138,6 @@ export const socialLinks: ISocialLinks[] = [
 ];
 
 export const techs: ITechs[] = [
-  // {
-  //   id: "html5",
-  //   name: "HTML",
-  //   Icon: AiOutlineHtml5,
-  // },
-  // {
-  //   id: "sass",
-  //   name: "Sass",
-  //   Icon: IoLogoSass,
-  // },
   {
     id: "javascript",
     name: "Javascript",
@@ -158,11 +153,6 @@ export const techs: ITechs[] = [
     name: "Java",
     Icon: SiJava,
   },
-  // {
-  //   id: "python",
-  //   name: "Python",
-  //   Icon: SiPython,
-  // },
   {
     id: "react",
     name: "React.js",
@@ -178,16 +168,11 @@ export const techs: ITechs[] = [
     name: "Styled-Components",
     Icon: SiStyledcomponents,
   },
-  // {
-  //   id: "materialui",
-  //   name: "Material UI",
-  //   Icon: SiMaterialui,
-  // },
-  // {
-  //   id: "framer-motion",
-  //   name: "Framer Motion",
-  //   Icon: SiFramer,
-  // },
+  {
+    id: "webpack",
+    name: "Webpack",
+    Icon: SiWebpack,
+  },
   {
     id: "node",
     name: "Node.js",
@@ -197,6 +182,11 @@ export const techs: ITechs[] = [
     id: "express",
     name: "Express.js",
     Icon: SiExpress,
+  },
+  {
+    id: "loopback",
+    name: "Loopback.js",
+    Icon: TbCurlyLoop,
   },
   {
     id: "mongodb",
@@ -214,20 +204,25 @@ export const techs: ITechs[] = [
     Icon: SiSequelize,
   },
   {
+    id: "nginx",
+    name: "Nginx",
+    Icon: SiNginx,
+  },
+  {
+    id: "jest",
+    name: "Jest",
+    Icon: SiJest,
+  },
+  {
+    id: "sonarqube",
+    name: "SonarQube",
+    Icon: SiSonarqube,
+  },
+  {
     id: "restapi",
     name: "RESTful API",
     Icon: AiFillApi,
   },
-  // {
-  //   id: "jsonwebtoken",
-  //   name: "JWT",
-  //   Icon: SiJsonwebtokens,
-  // },
-  // {
-  //   id: "github",
-  //   name: "Github",
-  //   Icon: SiGithub,
-  // },
   {
     id: "git",
     name: "Git",

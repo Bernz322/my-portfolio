@@ -13,12 +13,12 @@ import {
 function About() {
   const one = {
     id: 0,
-    data: "I am a self-taught developer and a graduate of Bachelor of Science in Computer Engineering with RA 7687 DOST Scholarship. I started coding in 2020 with Java and had much fun doing Swing Projects. I then decided to jump to web development in the middle of the same year and picked up Javascript as my main language.",
+    data: "I am a full-time Full Stack Developer at Collabera Philippines and a graduate of Bachelor of Science in Computer Engineering with RA 7687 DOST Scholarship. I started coding in 2020 with Java and had much fun doing Swing Projects. I then decided to jump to web development in the middle of the same year and picked up Javascript as my main language.",
   };
 
   const two = {
     id: 1,
-    data: "My main focus these days is enhancing my Data Structures and Algorithm to become a better developer.",
+    data: "My main focus these days is building industry grade full stack applications.",
   };
   const descriptions = [one, two];
 
@@ -72,7 +72,7 @@ function About() {
             </motion.p>
           ))}
           <motion.p className="desc" variants={fadeUp}>
-            I also enjoy playing video games in my free time and would love to
+            I also enjoy playing video games in my spare time and would love to
             play with anyone. Here is my{" "}
             <a
               href="https://steamcommunity.com/id/celestial6000/"
