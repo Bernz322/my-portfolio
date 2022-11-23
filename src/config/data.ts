@@ -34,10 +34,10 @@ import {
   SiTailwindcss,
   SiWebpack,
   SiJest,
-  // SiSonarqube,
+  SiSonarqube,
   // SiNginx,
 } from "react-icons/si";
-// import { TbCurlyLoop } from "react-icons/tb";
+import { TbCurlyLoop } from "react-icons/tb";
 import { INavLinks, IProjects, ISocialLinks, ITechs } from "./types";
 import {
   DarkOGVacay,
@@ -183,11 +183,11 @@ export const techs: ITechs[] = [
     name: "Express.js",
     Icon: SiExpress,
   },
-  // {
-  //   id: "loopback",
-  //   name: "Loopback.js",
-  //   Icon: TbCurlyLoop,
-  // },
+  {
+    id: "loopback",
+    name: "Loopback.js",
+    Icon: TbCurlyLoop,
+  },
   {
     id: "mongodb",
     name: "MongoDB",
@@ -213,11 +213,11 @@ export const techs: ITechs[] = [
     name: "Jest",
     Icon: SiJest,
   },
-  // {
-  //   id: "sonarqube",
-  //   name: "SonarQube",
-  //   Icon: SiSonarqube,
-  // },
+  {
+    id: "sonarqube",
+    name: "SonarQube",
+    Icon: SiSonarqube,
+  },
   {
     id: "restapi",
     name: "RESTful API",
