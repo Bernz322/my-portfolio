@@ -20,15 +20,15 @@ import {
   SiJava,
   SiGit,
   SiMaterialui,
-  SiPython,
+  // SiPython,
   SiJavascript,
   SiFramer,
   SiExpress,
   SiMapbox,
   SiSpotify,
   SiSocketdotio,
-  SiOpencv,
-  SiGooglecalendar,
+  // SiOpencv,
+  // SiGooglecalendar,
   SiMega,
   SiJsonwebtokens,
   SiTailwindcss,
@@ -47,8 +47,8 @@ import {
   OGSpotify,
   DarkOGTsismis,
   LightOGTsismis,
-  LightOGThesis,
-  DarkOGThesis,
+  // LightOGThesis,
+  // DarkOGThesis,
   LightAboutVacay,
   DarkAboutVacay,
   LightShortenJB,
@@ -56,8 +56,8 @@ import {
   ProfileSpotify,
   DarkChatBoxTsismis,
   LightChatBoxTsismis,
-  DarkDashboardThesis,
-  LightDashboardThesis,
+  // DarkDashboardThesis,
+  // LightDashboardThesis,
   DarkLoaderJB,
   LightLoaderJB,
   Light404JB,
@@ -87,7 +87,7 @@ import {
   LightReservationVacay,
   DarkReviewVacay,
   LightReviewVacay,
-  ProjectSetup,
+  // ProjectSetup,
   Others,
 } from "../assets/projects";
 
@@ -550,85 +550,85 @@ export const projects: IProjects[] = [
       },
     ],
   },
-  {
-    name: "Thesis",
-    info: "A web app for viewing a student's attendance record based on their RFID tags. The attendance recording is done through a Raspberry Pi 4B with an RC522 Reader and a HOG algorithm-based Face Recognition functionality for added security. This is my undergraduate Thesis entitled 'Automated Attendance System using RFID, Face Recognition and SMS Capability'. Full details available in the repository.",
-    ogImage: {
-      dark: DarkOGThesis,
-      light: LightOGThesis,
-    },
-    redirect: "thesis",
-    techs: [
-      {
-        name: "React.js",
-        Icon: SiReact,
-      },
-      {
-        name: "Redux",
-        Icon: SiRedux,
-      },
-      {
-        name: "MantineUI",
-        Icon: SiMega,
-      },
-      {
-        name: "Full Calendar",
-        Icon: SiGooglecalendar,
-      },
-      {
-        name: "Node.js",
-        Icon: SiNodedotjs,
-      },
-      {
-        name: "Express.js",
-        Icon: SiExpress,
-      },
-      {
-        name: "RESTful API",
-        Icon: AiFillApi,
-      },
-      {
-        name: "JWT",
-        Icon: SiJsonwebtokens,
-      },
-      {
-        name: "Sequelize ORM",
-        Icon: SiSequelize,
-      },
-      {
-        name: "MySQL",
-        Icon: SiMysql,
-      },
-      {
-        name: "Raspberry Pi 4B",
-        Icon: SiRaspberrypi,
-      },
-      {
-        name: "Python",
-        Icon: SiPython,
-      },
-      {
-        name: "OpenCV",
-        Icon: SiOpencv,
-      },
-    ],
-    urls: {
-      github: "https://github.com/Bernz322/snnhs-attendance-system",
-      demo: "https://snnhs-attendance.netlify.app/",
-    },
-    features: [
-      {
-        image: { light: LightDashboardThesis, dark: DarkDashboardThesis },
-        detail:
-          "The dashboard of the web application which features a table for all user/students and a calendar that will display all of the days that the student is present after they scanned their RFID tags in the school successfully. A demo and journal format manuscript is available just below.",
-      },
-      {
-        image: { light: ProjectSetup, dark: ProjectSetup },
-        detail:
-          "The setup of the entire project wherein the Raspberry Pi and other components is contained in an acrylic enclosure (left) and is operated using computer peripherals such as  monitor, mouse, keyboard (right).",
-      },
-    ],
-  },
+  // {
+  //   name: "Thesis",
+  //   info: "A web app for viewing a student's attendance record based on their RFID tags. The attendance recording is done through a Raspberry Pi 4B with an RC522 Reader and a HOG algorithm-based Face Recognition functionality for added security. This is my undergraduate Thesis entitled 'Automated Attendance System using RFID, Face Recognition and SMS Capability'. Full details available in the repository.",
+  //   ogImage: {
+  //     dark: DarkOGThesis,
+  //     light: LightOGThesis,
+  //   },
+  //   redirect: "thesis",
+  //   techs: [
+  //     {
+  //       name: "React.js",
+  //       Icon: SiReact,
+  //     },
+  //     {
+  //       name: "Redux",
+  //       Icon: SiRedux,
+  //     },
+  //     {
+  //       name: "MantineUI",
+  //       Icon: SiMega,
+  //     },
+  //     {
+  //       name: "Full Calendar",
+  //       Icon: SiGooglecalendar,
+  //     },
+  //     {
+  //       name: "Node.js",
+  //       Icon: SiNodedotjs,
+  //     },
+  //     {
+  //       name: "Express.js",
+  //       Icon: SiExpress,
+  //     },
+  //     {
+  //       name: "RESTful API",
+  //       Icon: AiFillApi,
+  //     },
+  //     {
+  //       name: "JWT",
+  //       Icon: SiJsonwebtokens,
+  //     },
+  //     {
+  //       name: "Sequelize ORM",
+  //       Icon: SiSequelize,
+  //     },
+  //     {
+  //       name: "MySQL",
+  //       Icon: SiMysql,
+  //     },
+  //     {
+  //       name: "Raspberry Pi 4B",
+  //       Icon: SiRaspberrypi,
+  //     },
+  //     {
+  //       name: "Python",
+  //       Icon: SiPython,
+  //     },
+  //     {
+  //       name: "OpenCV",
+  //       Icon: SiOpencv,
+  //     },
+  //   ],
+  //   urls: {
+  //     github: "https://github.com/Bernz322/snnhs-attendance-system",
+  //     demo: "https://snnhs-attendance.netlify.app/",
+  //   },
+  //   features: [
+  //     {
+  //       image: { light: LightDashboardThesis, dark: DarkDashboardThesis },
+  //       detail:
+  //         "The dashboard of the web application which features a table for all user/students and a calendar that will display all of the days that the student is present after they scanned their RFID tags in the school successfully. A demo and journal format manuscript is available just below.",
+  //     },
+  //     {
+  //       image: { light: ProjectSetup, dark: ProjectSetup },
+  //       detail:
+  //         "The setup of the entire project wherein the Raspberry Pi and other components is contained in an acrylic enclosure (left) and is operated using computer peripherals such as  monitor, mouse, keyboard (right).",
+  //     },
+  //   ],
+  // },
   {
     name: "Others",
     info: "A compilation of all my other projects I have done when I first started my coding journey, and as a Computer Engineering student.",
