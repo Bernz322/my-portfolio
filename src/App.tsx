@@ -19,7 +19,7 @@ import Vacay from "./components/pages/Vacay";
 import JBShort from "./components/pages/JBShort";
 import Spotify from "./components/pages/Spotify";
 import Tsismis from "./components/pages/Tsismis";
-// import Thesis from "./components/pages/Thesis";
+import Thesis from "./components/pages/Thesis";
 import Others from "./components/pages/Others";
 
 function ScrollToTop() {
@@ -81,8 +81,8 @@ function App() {
             <Route path="/jbshort" element={<JBShort />} />
             <Route path="/spotify" element={<Spotify />} />
             <Route path="/tsismis" element={<Tsismis />} />
+            <Route path="/thesis" element={<Thesis />} />
             <Route path="/others" element={<Others />} />
-            {/* <Route path="/thesis" element={<Thesis />} /> */}
             <Route path="*" element={<Page404 />} />
           </Routes>
 
