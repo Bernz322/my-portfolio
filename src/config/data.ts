@@ -132,7 +132,7 @@ export const socialLinks: ISocialLinks[] = [
   },
   {
     name: "Facebook",
-    url: "https://web.facebook.com/userJeb64839928383894949qwerty",
+    url: "https://web.facebook.com/jb6000",
     Icon: FiFacebook,
   },
 ];

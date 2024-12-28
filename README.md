@@ -1,9 +1,9 @@
 <div align="center">
   <img alt="Logo" src="https://raw.githubusercontent.com/Bernz322/my-portfolio/main/src/assets/logo/logo.png" width="100" />
 </div>
-<h1 align="center"><a href='https://jeffreybernadas.tech' target='_blank' rel='noreferrer'>jeffreybernadas.tech</a></h1>
+<h1 align="center"><a href='https://v1.jeffreybernadas.com' target='_blank' rel='noreferrer'>https://v1.jeffreybernadas.com</a></h1>
 <p align="center">
- My website portfolio with design inspiration from <a href="https://brittanychiang.com" target="_blank" rel='noreferrer'>brittanychiang.com</a>. Hosted in <a href="https://www.netlify.com/" target="_blank" rel='noreferrer'>Netlify</a> with custom <a href="https://get.tech/" target="_blank">.TECH</a> domain from <a href="https://education.github.com/pack" target="_blank" rel='noreferrer'>Github Student Pack</a>. 
+ My first ever website portfolio with design inspiration from <a href="https://v4.brittanychiang.com" target="_blank" rel='noreferrer'>https://v4.brittanychiang.com</a>. Hosted in my own old laptop transformed server powered by Cloudflare and Nginx. 
 </p>
 <p align="center">
   <a href="https://app.netlify.com/sites/jeffreybernadas/deploys" target="_blank" rel='noreferrer'>
@@ -19,6 +19,8 @@
     <li>Styled Components</li>
     <li>Framer</li>
     <li>ESLint + Airbnb</li>
+    <li>Docker</li>
+    <li>Cloudflare and Nginx (deployment)</li>
 </ul>
 
 ## 🎨 Palette
@@ -51,24 +53,34 @@
 
 ![project-dark](https://raw.githubusercontent.com/Bernz322/my-portfolio/main/src/assets/readme/dark-project.png)
 
-## 💻 Installation & Deployment
+## 💻 Installation & Setup
 
-1. Install dependencies
-   <br>
+- Clone repository
+   ```
+   git clone https://github.com/Bernz322/my-portfolio.git
+   ```
+   ```
+   cd my-portfolio
+   ```
 
-   `npm install`
+#### Development Stage
+1. Build the image
+   ```
+   docker build -t <your-image-name> --target development .
+   ```
+2. Run the image
+   ```
+   docker run -d --name <your-container-name> -p 3000:3000 <your-image-name>
+   ```
 
-2. Start server
-   <br>
+#### Production Stage
 
-   `npm start`
+1. Build the image
+   ```
+   docker build -t <your-image-name> --target production .
+   ```
 
-3. Make changes and Host the codebase in a [Repository](https://github.com/)
-   <br>
-
-   `git remote & git push origin *branch*`
-
-4. Deploy repository using [Netlify](https://www.netlify.com/) with the Build command:
-   <br>
-
-   `CI= npm run build`
+2. Run the image
+   ```
+   docker run -d --name <your-container-name> -p 80:80 <your-image-name>
+   ```

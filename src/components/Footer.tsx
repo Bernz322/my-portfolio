@@ -1,21 +1,7 @@
-import { useEffect, useState } from "react";
 import { socialLinks } from "../config/data";
 import { StyledFooter } from "../styles";
 
 function Footer() {
-  const [visits, setVisits] = useState<number>();
-  useEffect(() => {
-    fetch("https://api.countapi.xyz/hit/jeffreybernadas.tech/visits").then(
-      (res) =>
-        res.json().then((data) => {
-          setVisits(data.value);
-        })
-    );
-  }, []);
-  const style = {
-    marginTop: "5px",
-    fontSize: "10px",
-  };
   return (
     <StyledFooter>
       <div className="socials">
@@ -40,7 +26,6 @@ function Footer() {
       >
         Built with <span>❤</span> by Jeffrey Bernadas
       </a>
-      <p style={style}>This page has been visited {visits} times.</p>
     </StyledFooter>
   );
 }
